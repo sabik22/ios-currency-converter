@@ -17,13 +17,14 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [CurrencyService fetchCurrencies];
 
-    CurrencyService *fetchCurrency = [[CurrencyService alloc] init];
-    [fetchCurrency fetchCurrenciesWithCompletionHandler:@"" success:^(NSArray *array) {
-        NSLog(@"Count : %d",(int)array.count);
-    } failure:^(NSError *error) {
-        
-    }];
+//    CurrencyService *fetchCurrency = [[CurrencyService alloc] init];
+//    [fetchCurrency fetchCurrenciesWithCompletionHandler:@"" success:^(NSArray *array) {
+//        NSLog(@"Count : %d",(int)array.count);
+//    } failure:^(NSError *error) {
+//
+//    }];
     return YES;
 }
 

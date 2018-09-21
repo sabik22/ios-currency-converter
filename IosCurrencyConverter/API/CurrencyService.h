@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong)  NSMutableArray *currencies;
 
++ (void) fetchCurrencies;
+
 - (void)fetchCurrenciesWithCompletionHandler:(NSString *) empty
                                      success:(void (^)(NSArray *array))success
                                      failure:(void (^)(NSError *error))failure;
