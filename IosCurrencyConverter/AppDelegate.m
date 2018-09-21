@@ -17,6 +17,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"This is where Application Starts");
     [CurrencyService fetchCurrencies];
 
 //    CurrencyService *fetchCurrency = [[CurrencyService alloc] init];
