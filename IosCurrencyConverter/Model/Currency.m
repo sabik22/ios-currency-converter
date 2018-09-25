@@ -7,6 +7,7 @@
 //
 
 #import "Currency.h"
+#import "EncodeDecodeUtils.h"
 
 @implementation Currency
 
@@ -16,6 +17,16 @@
     self.currencyName = dictionary[@"currencyName"];
     self.currencySymbol = dictionary[@"currencySymbol"];
     self.countryName = dictionary[@"name"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super init]) {
+        [EncodeDecodeUtils decodeWithDecoder:decoder object:self];
+    }
+    return self;
+}
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [EncodeDecodeUtils encodeWithCoder:encoder object:self];
 }
 
 @end

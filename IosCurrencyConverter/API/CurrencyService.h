@@ -14,6 +14,8 @@
 
 + (void) fetchCurrencies;
 
++ (void) fetchBaseExhangeRates;
+
 - (void)fetchCurrenciesWithCompletionHandler:(NSString *) empty
                                      success:(void (^)(NSArray *array))success
                                      failure:(void (^)(NSError *error))failure;

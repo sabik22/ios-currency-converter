@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 @class Currency;
 
-@interface AppState : NSObject
+@interface AppState : NSObject <NSCoding>
 
 + (instancetype) instance;
+- (void) saveToLocal;
 @property (nonatomic, strong)  NSMutableArray *currencies;
 @property (nonatomic, strong)  Currency *defaultCurrency1;
 @property (nonatomic, strong)  Currency *defaultCurrency2;

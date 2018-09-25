@@ -10,6 +10,9 @@
 #import "AlertUtils.h"
 #import "UIUtils.h"
 #import "AppState.h"
+#import "NSUserDefaultsUtils.h"
+#import "DateUtils.h"
+#import "EncodeDecodeUtils.h"
 
 @interface Utils : NSObject
 

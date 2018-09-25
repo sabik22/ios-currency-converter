@@ -47,6 +47,7 @@
 - (void)dataFromController:(Currency *)currency {
     self.appState.isFavoriteCurrencySelected = true;
     self.appState.defaultCurrency1 = currency;
+    [self.appState saveToLocal];
     dispatch_async(dispatch_get_main_queue(), ^{
        [self openCurrencyConverterVC];
     });

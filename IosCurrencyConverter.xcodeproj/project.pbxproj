@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0709F80F2155F2A600A704BD /* NSUserDefaultsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0709F80E2155F2A600A704BD /* NSUserDefaultsUtils.m */; };
 		070B5F6C2151892700C3BC84 /* AlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B5F6B2151892700C3BC84 /* AlertUtils.m */; };
 		0730A4242150381F00DBFC46 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4232150381F00DBFC46 /* Currency.m */; };
 		0730A4282150D28B00DBFC46 /* CurrencyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4272150D28B00DBFC46 /* CurrencyService.m */; };
@@ -16,6 +17,10 @@
 		073F263021521A250078C978 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 073F262E21521A250078C978 /* CountryCell.xib */; };
 		073F2633215250C80078C978 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F2632215250C80078C978 /* UIUtils.m */; };
 		073F26372152548E0078C978 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F26362152548E0078C978 /* Utils.m */; };
+		07967D7B2158B99F00E2114A /* EncodeDecodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07967D7A2158B99F00E2114A /* EncodeDecodeUtils.m */; };
+		07C7358E2158D68700C60A61 /* AppInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7358D2158D68700C60A61 /* AppInitializer.m */; };
+		07C735912158E97900C60A61 /* ExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C735902158E97900C60A61 /* ExchangeRate.m */; };
+		07C735942158EF6800C60A61 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C735932158EF6800C60A61 /* DateUtils.m */; };
 		07E36BCB214FC05B00C2811B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E36BCA214FC05B00C2811B /* AppDelegate.m */; };
 		07E36BCE214FC05B00C2811B /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E36BCD214FC05B00C2811B /* DashboardViewController.m */; };
 		07E36BD1214FC05B00C2811B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E36BCF214FC05B00C2811B /* Main.storyboard */; };
@@ -27,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0709F80D2155F2A600A704BD /* NSUserDefaultsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsUtils.h; sourceTree = "<group>"; };
+		0709F80E2155F2A600A704BD /* NSUserDefaultsUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsUtils.m; sourceTree = "<group>"; };
 		070B5F6A2151892700C3BC84 /* AlertUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertUtils.h; sourceTree = "<group>"; };
 		070B5F6B2151892700C3BC84 /* AlertUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertUtils.m; sourceTree = "<group>"; };
 		0730A4222150381F00DBFC46 /* Currency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
@@ -44,6 +51,14 @@
 		073F2632215250C80078C978 /* UIUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
 		073F26352152548E0078C978 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		073F26362152548E0078C978 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		07967D792158B99F00E2114A /* EncodeDecodeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncodeDecodeUtils.h; sourceTree = "<group>"; };
+		07967D7A2158B99F00E2114A /* EncodeDecodeUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncodeDecodeUtils.m; sourceTree = "<group>"; };
+		07C7358C2158D68700C60A61 /* AppInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInitializer.h; sourceTree = "<group>"; };
+		07C7358D2158D68700C60A61 /* AppInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInitializer.m; sourceTree = "<group>"; };
+		07C7358F2158E97900C60A61 /* ExchangeRate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeRate.h; sourceTree = "<group>"; };
+		07C735902158E97900C60A61 /* ExchangeRate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeRate.m; sourceTree = "<group>"; };
+		07C735922158EF6800C60A61 /* DateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		07C735932158EF6800C60A61 /* DateUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		07E36BC6214FC05B00C2811B /* IosCurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosCurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E36BC9214FC05B00C2811B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07E36BCA214FC05B00C2811B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +95,12 @@
 				073F2632215250C80078C978 /* UIUtils.m */,
 				073F26352152548E0078C978 /* Utils.h */,
 				073F26362152548E0078C978 /* Utils.m */,
+				0709F80D2155F2A600A704BD /* NSUserDefaultsUtils.h */,
+				0709F80E2155F2A600A704BD /* NSUserDefaultsUtils.m */,
+				07967D792158B99F00E2114A /* EncodeDecodeUtils.h */,
+				07967D7A2158B99F00E2114A /* EncodeDecodeUtils.m */,
+				07C735922158EF6800C60A61 /* DateUtils.h */,
+				07C735932158EF6800C60A61 /* DateUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -89,6 +110,8 @@
 			children = (
 				0730A4222150381F00DBFC46 /* Currency.h */,
 				0730A4232150381F00DBFC46 /* Currency.m */,
+				07C7358F2158E97900C60A61 /* ExchangeRate.h */,
+				07C735902158E97900C60A61 /* ExchangeRate.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +171,8 @@
 				07E36BD8214FC05D00C2811B /* main.m */,
 				0730A4292150D29D00DBFC46 /* AppState.h */,
 				0730A42A2150D29D00DBFC46 /* AppState.m */,
+				07C7358C2158D68700C60A61 /* AppInitializer.h */,
+				07C7358D2158D68700C60A61 /* AppInitializer.m */,
 			);
 			path = IosCurrencyConverter;
 			sourceTree = "<group>";
@@ -165,9 +190,9 @@
 			isa = PBXGroup;
 			children = (
 				07FCEEE72153CAC000AF258A /* CurrencyTableVC.h */,
+				07FCEEEA2153CAC000AF258A /* CurrencyTableVC.m */,
 				07FCEEE82153CAC000AF258A /* CurrencyConverterVC.h */,
 				07FCEEE92153CAC000AF258A /* CurrencyConverterVC.m */,
-				07FCEEEA2153CAC000AF258A /* CurrencyTableVC.m */,
 			);
 			path = CurrencyConverter;
 			sourceTree = "<group>";
@@ -243,9 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C7358E2158D68700C60A61 /* AppInitializer.m in Sources */,
+				07967D7B2158B99F00E2114A /* EncodeDecodeUtils.m in Sources */,
 				0730A42E2150FCA000DBFC46 /* ApiService.m in Sources */,
+				0709F80F2155F2A600A704BD /* NSUserDefaultsUtils.m in Sources */,
 				07E36BCE214FC05B00C2811B /* DashboardViewController.m in Sources */,
 				070B5F6C2151892700C3BC84 /* AlertUtils.m in Sources */,
+				07C735912158E97900C60A61 /* ExchangeRate.m in Sources */,
+				07C735942158EF6800C60A61 /* DateUtils.m in Sources */,
 				073F26372152548E0078C978 /* Utils.m in Sources */,
 				0730A4282150D28B00DBFC46 /* CurrencyService.m in Sources */,
 				07E36BD9214FC05D00C2811B /* main.m in Sources */,

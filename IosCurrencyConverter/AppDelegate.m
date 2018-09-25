@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  FirstApp
+//  ISOCurrencyConverter
 //
 //  Created by Bikash Shrestha on 9/17/18.
 //  Copyright © 2018 Bikash Shrestha. All rights reserved.
@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Currency.h"
 #import "CurrencyService.h"
+#import "AppInitializer.h"
 
 @interface AppDelegate()
 
@@ -17,7 +18,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [CurrencyService fetchCurrencies];
+    [AppInitializer start];
     return YES;
 }
 
