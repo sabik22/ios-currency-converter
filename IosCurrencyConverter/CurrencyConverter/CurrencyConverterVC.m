@@ -176,15 +176,23 @@
     BOOL alreadySelected=YES;
     if(self.selectedNumber == 1){
         if(![self.currency2.countryID isEqualToString:currency.countryID]){
-            alreadySelected = NO;
-            self.currency1 = currency;
+            if(self.currency1 != currency){
+                alreadySelected = NO;
+                self.currency1 = currency;
+                [UIUtils repositioningView:self.imageViewCurrency1 vertical:0 horizontal:10];
+                [UIUtils repositioningView:self.imageViewCurrency1 vertical:0 horizontal:-10];
+            }
         }
     }
     
     if(self.selectedNumber == 2){
         if(![self.currency1.currencyID isEqualToString:currency.currencyID]){
-            alreadySelected = NO;
-            self.currency2 = currency;
+            if(self.currency2 != currency) {
+                alreadySelected = NO;
+                self.currency2 = currency;
+                [UIUtils repositioningView:self.imageViewCurrency2 vertical:0 horizontal:10];
+                [UIUtils repositioningView:self.imageViewCurrency2 vertical:0 horizontal:-10];
+            }
         }
     }
     
