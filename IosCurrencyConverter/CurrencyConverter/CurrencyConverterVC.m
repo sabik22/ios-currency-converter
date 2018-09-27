@@ -61,6 +61,7 @@
                                 action:@selector(textFieldCurrency2DidChange:)
                       forControlEvents:UIControlEventEditingChanged];
     self.navigationController.view.backgroundColor = [UIColor colorWithRed:0.0f green:145.0f/255.0f blue:147.0f/255.0f alpha:1];
+   
 }
 
 - (void)textFieldCurrency1DidChange:(UITextField *)textField {
@@ -72,7 +73,7 @@
     }
     NSString *text = self.textFieldCurrency1.text;
     float c = [text floatValue];
-    if(c == 0.0f)
+    if(c <= 0.0f)
         self.textFieldCurrency2.text = @"0";
     else
         self.textFieldCurrency2.text = [NSString stringWithFormat:@"%.2f",c*self.exchangeRate];
@@ -87,7 +88,7 @@
     }
     NSString *text = self.textFieldCurrency2.text;
     float c = [text floatValue];
-    if(c == 0.0f)
+    if(c <= 0.0f)
         self.textFieldCurrency1.text = @"0";
     else
         self.textFieldCurrency1.text = [NSString stringWithFormat:@"%.2f",c*(1/self.exchangeRate)];
@@ -159,19 +160,7 @@
     NSString *symbol2 = self.currency2.currencySymbol ? self.currency2.currencySymbol : self.currency2.currencyID;
     self.labelCurrency1Rate.text = [NSString stringWithFormat:@"%@ 1.0 = %@ %.02f", symbol1, symbol2, self.exchangeRate];
     self.labelCurrency2Rate.text = [NSString stringWithFormat:@"%@ 1.0 = %@ %.02f", symbol2, symbol1, 1/self.exchangeRate];
-    if ([self.textFieldCurrency1.text hasPrefix:@"0"]) {
-        self.textFieldCurrency1.text = [self.textFieldCurrency1.text substringFromIndex:1];
-    }
-    if ([self.textFieldCurrency1.text isEqualToString:@""]){
-        self.textFieldCurrency1.text = @"0";
-    }
-    NSString *text = self.textFieldCurrency1.text;
-    float c = [text floatValue];
-    if (c >= 0.0f) {
-        self.textFieldCurrency2.text = @"0";
-    } else {
-        self.textFieldCurrency2.text = [NSString stringWithFormat:@"%.2f",c*self.exchangeRate];
-    }
+    [self textFieldCurrency1DidChange:nil];
 }
 
 - (IBAction)changeAction:(UIButton *)sender {
