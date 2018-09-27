@@ -108,12 +108,12 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-- (IBAction)buttonCurrency1Action:(UIButton *)button {
+- (IBAction)buttonCurrency1Action:(UIButton *)sender {
     self.selectedNumber = 1;
     [self selectCurrencyNumber:1];
 }
 
-- (IBAction)buttonCurrency2Action:(UIButton *)button {
+- (IBAction)buttonCurrency2Action:(UIButton *)sender {
     self.selectedNumber = 2;
     [self selectCurrencyNumber:2];
 }
@@ -160,13 +160,24 @@
     NSString *symbol2 = self.currency2.currencySymbol ? self.currency2.currencySymbol : self.currency2.currencyID;
     self.labelCurrency1Rate.text = [NSString stringWithFormat:@"%@ 1.0 = %@ %.02f", symbol1, symbol2, self.exchangeRate];
     self.labelCurrency2Rate.text = [NSString stringWithFormat:@"%@ 1.0 = %@ %.02f", symbol2, symbol1, 1/self.exchangeRate];
-    [self textFieldCurrency1DidChange:nil];
+    if (!self.isChanged) {
+        [self textFieldCurrency1DidChange:nil];
+    } else {
+        [self textFieldCurrency2DidChange:nil];
+    }
 }
 
 - (IBAction)changeAction:(UIButton *)sender {
-    [UIUtils repositioningView:self.isChanged? self.viewCurrency2:self.viewCurrency1  vertical:120 horizontal:0];
-    [UIUtils repositioningView:self.isChanged? self.viewCurrency1:self.viewCurrency2  vertical:-120 horizontal:0];
     self.isChanged = !self.isChanged;
+    [UIUtils repositioningView:self.isChanged? self.viewCurrency1:self.viewCurrency2  vertical:120 horizontal:0];
+    [UIUtils repositioningView:self.isChanged? self.viewCurrency2:self.viewCurrency1  vertical:-120 horizontal:0];
+    if (!self.isChanged) {
+        self.textFieldCurrency1.text = self.textFieldCurrency2.text;
+        [self textFieldCurrency1DidChange:nil];
+    } else {
+        self.textFieldCurrency2.text = self.textFieldCurrency1.text;
+        [self textFieldCurrency2DidChange:nil];
+    }
 }
 
 #pragma mark - CurrencyTableVCDelegate
@@ -179,8 +190,7 @@
             if(self.currency1 != currency){
                 alreadySelected = NO;
                 self.currency1 = currency;
-                [UIUtils repositioningView:self.imageViewCurrency1 vertical:0 horizontal:10];
-                [UIUtils repositioningView:self.imageViewCurrency1 vertical:0 horizontal:-10];
+                [UIUtils repositioningView:self.imageViewCurrency1 vertical:50 horizontal:0];
             }
         }
     }
@@ -190,8 +200,8 @@
             if(self.currency2 != currency) {
                 alreadySelected = NO;
                 self.currency2 = currency;
-                [UIUtils repositioningView:self.imageViewCurrency2 vertical:0 horizontal:10];
-                [UIUtils repositioningView:self.imageViewCurrency2 vertical:0 horizontal:-10];
+                [UIUtils repositioningView:self.imageViewCurrency2 vertical:50 horizontal:0];
+                
             }
         }
     }

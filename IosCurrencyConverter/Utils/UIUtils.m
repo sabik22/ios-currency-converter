@@ -24,7 +24,12 @@
          usingSpringWithDamping:0.5
           initialSpringVelocity:1
                         options:UIViewAnimationOptionLayoutSubviews
-                     animations:^{[view setFrame:CGRectMake( view.frame.origin.x + horizontal, view.frame.origin.y + vertical, 0, 0)];}
+                     animations:^{
+                         CGRect r = [view frame];
+                         r.origin.x += horizontal;
+                         r.origin.y += vertical;
+                         [view setFrame: r];
+                     }
                      completion:nil];
 }
 
