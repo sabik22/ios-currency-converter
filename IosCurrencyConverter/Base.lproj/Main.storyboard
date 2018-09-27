@@ -13,7 +13,7 @@
         <!--My First App-->
         <scene sceneID="xed-bT-ka5">
             <objects>
-                <viewController id="SAa-8N-fLj" customClass="DashboardViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="SAa-8N-fLj" customClass="DashboardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZNM-z8-3EY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1783.2" y="909.89505247376314"/>
         </scene>
-        <!--Currency Converter-->
+        <!--Converter-->
         <scene sceneID="oTT-cs-dGO">
             <objects>
-                <viewController storyboardIdentifier="CurrencyConverterViewController" title="Currency Converter" id="Nx0-Iu-3qT" customClass="CurrencyConverterVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrencyConverterViewController" title="Converter" id="Nx0-Iu-3qT" customClass="CurrencyConverterVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VPv-Tz-PPC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

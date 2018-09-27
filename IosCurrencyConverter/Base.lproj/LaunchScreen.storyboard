@@ -18,22 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wCF-w3-tbN">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_first_app" translatesAutoresizingMaskIntoConstraints="NO" id="IEz-8o-qQd">
-                                <rect key="frame" x="20" y="294" width="335" height="79"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applogo" translatesAutoresizingMaskIntoConstraints="NO" id="hth-5A-Kec">
+                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wCF-w3-tbN" secondAttribute="trailing" id="80G-NV-hCj"/>
-                            <constraint firstItem="IEz-8o-qQd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="8Ow-or-ZKJ"/>
-                            <constraint firstItem="IEz-8o-qQd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9cU-yq-3Tr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wCF-w3-tbN" secondAttribute="bottom" id="Iyt-Vb-CyC"/>
-                            <constraint firstItem="wCF-w3-tbN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LH6-Jd-4sS"/>
-                            <constraint firstItem="wCF-w3-tbN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qr3-Tg-iAT"/>
-                            <constraint firstAttribute="trailing" secondItem="IEz-8o-qQd" secondAttribute="trailing" constant="20" id="sA0-fd-mCc"/>
+                            <constraint firstItem="hth-5A-Kec" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="YZi-Pr-ftG"/>
+                            <constraint firstItem="hth-5A-Kec" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dlc-b5-6SL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -44,7 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="2560" height="1600"/>
-        <image name="my_first_app" width="576" height="79"/>
+        <image name="applogo" width="100" height="100"/>
     </resources>
 </document>

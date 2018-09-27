@@ -10,6 +10,7 @@
 #import "Currency.h"
 #import "CurrencyService.h"
 #import "AppInitializer.h"
+#import "MainTabBarController.h"
 
 @interface AppDelegate()
 
@@ -18,8 +19,21 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     [AppInitializer start];
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainVC" bundle:nil];
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MainVC"];
+    self.window.rootViewController = viewController;
+    UINavigationBar.appearance.translucent = NO;
+    UINavigationBar.appearance.barTintColor = [UIColor colorWithRed:0.0f green:145.0f/255.0f blue:147.0f/255.0f alpha:1];
+    UINavigationBar.appearance.tintColor = UIColor.whiteColor;
+    UINavigationBar.appearance.shadowImage = [[UIImage alloc] init];
+    UINavigationBar.appearance.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.window makeKeyAndVisible];
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

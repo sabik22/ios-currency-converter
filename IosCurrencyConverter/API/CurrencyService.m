@@ -12,6 +12,7 @@
 #import "AppState.h"
 #import "Utils.h"
 #import "ExchangeRate.h"
+#import "ICCError.h"
 
 @interface CurrencyService()
 
@@ -73,25 +74,22 @@ NSString *urlBaseExchangeRate = @"http://data.fixer.io/api/latest?access_key=1cc
          }];
 }
 
-- (void)fetchExchangeRateWithCompletionHandler:(NSString *) currencyCode1
-                                 currencyCode2: (NSString *) currencyCode2
-                                       success:(void (^)(float exchangeRate))success
-                                       failure:(void (^)(NSError *error))failure{
+- (void)fetchExchangeRateWithFirstCurrency:(NSString *) firstCurrency
+                            secondCurrency: (NSString *) secondCurrency
+                                   success:(void (^)(float exchangeRate))success
+                                   failure:(void (^)(NSError *error))failure{
     NSString *date = [DateUtils stringFromDate:[NSDate date]  format:@"yyyy-MM-dd"];
     NSString *key = [NSString stringWithFormat:@"%@-%@",NSStringFromClass([ExchangeRate class]),date];
     ExchangeRate *rate = (ExchangeRate *) [NSUserDefaultsUtils getWithKey:key];
     if (rate) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            float rateOne = [rate.rates[currencyCode1] floatValue];
-            float rateTwo = [rate.rates[currencyCode2] floatValue];
+            float rateOne = [rate.rates[firstCurrency] floatValue];
+            float rateTwo = [rate.rates[secondCurrency] floatValue];
             success(rateTwo/rateOne);
         });
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSMutableDictionary* details = [NSMutableDictionary dictionary];
-            [details setValue:@"ran out of money" forKey:NSLocalizedDescriptionKey];
-            NSError *error = [NSError errorWithDomain:@"world" code:200 userInfo:details];
-            failure(error);
+            failure([ICCError dataNotFound]);
         });
     }
     

@@ -22,6 +22,7 @@
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSData *encodeData = [NSKeyedArchiver archivedDataWithRootObject: object];
     [prefs setObject:encodeData forKey:key];
+    [prefs synchronize];
 }
 
 @end

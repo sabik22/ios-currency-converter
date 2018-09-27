@@ -43,7 +43,7 @@
             self.defaultCurrency1 = [[Currency alloc] init];
             self.defaultCurrency1.currencyID = @"NPR";
             self.defaultCurrency1.countryID = @"np";
-            self.defaultCurrency2.currencySymbol = @"(Rs))";
+            self.defaultCurrency2.currencySymbol = @"Rs";
         }
         if (!self.defaultCurrency2){
             self.defaultCurrency2 = [[Currency alloc]init];

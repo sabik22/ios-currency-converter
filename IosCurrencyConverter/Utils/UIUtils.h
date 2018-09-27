@@ -10,9 +10,11 @@
 
 @interface UIUtils : NSObject
 
-+ (void) roundImage: (UIImageView *) imageView
++ (void) roundImage: (UIView *) imageView
              radius:(float) radius
              border: (float) border
         borderColor: (UIColor *) borderColor;
+
++ (void) repositioningView: (UIView *) view vertical: (float) vertical horizontal: (float) horizontal;
 
 @end

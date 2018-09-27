@@ -8,17 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "Currency.h"
+@class CurrencyTableVC;
 
-@protocol CurrencyTableVCDelegate <NSObject>
+@protocol CurrencyTableVCDelegate<NSObject>
 
 @required
-- (void) dataFromController: (Currency *) currency;
+
+- (void)currencyTableVC:(CurrencyTableVC *)currencyTableVC selectedCurrency:(Currency *)currency;
 
 @end
 
 @interface CurrencyTableVC: UITableViewController<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
-@property (nonatomic, retain) NSString *viewTitle;
-@property (nonatomic, weak) id <CurrencyTableVCDelegate> delegate;
+@property (nonatomic, copy) NSString *viewTitle;
+@property (assign) id<CurrencyTableVCDelegate>delegate;
 
 @end

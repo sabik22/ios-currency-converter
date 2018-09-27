@@ -20,8 +20,8 @@
                                      success:(void (^)(NSArray *array))success
                                      failure:(void (^)(NSError *error))failure;
 
-- (void)fetchExchangeRateWithCompletionHandler:(NSString *) currencyCode1
-                                 currencyCode2: (NSString *) currencyCode2
+- (void)fetchExchangeRateWithFirstCurrency:(NSString *) firstCurrency
+                                 secondCurrency: (NSString *) secondCurrency
                                        success:(void (^)(float exchangeRate))success
                                        failure:(void (^)(NSError *error))failure;
 

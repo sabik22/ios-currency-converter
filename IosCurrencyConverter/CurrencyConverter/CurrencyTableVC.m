@@ -17,6 +17,8 @@
 @property (strong, nonatomic) UISearchBar *searchBar;
 @property (strong, nonatomic) AppState *appState;
 @property (strong, nonatomic) NSMutableArray *filteredCurrencies;
+@property (strong, nonatomic) NSMutableArray *sectionKeys;
+@property (strong, nonatomic) NSMutableDictionary *currencySections;
 @property (assign, nonatomic) BOOL isFiltered;
 
 @end
@@ -27,19 +29,43 @@ static NSString *nibName = @"CountryCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.currencySections = [[NSMutableDictionary alloc] init];
+    self.sectionKeys = [[NSMutableArray alloc] init];
     self.isFiltered = NO;
     [self setupSearchBar];
     [self setupTableViewCell];
     self.appState = [AppState instance];
     self.filteredCurrencies = self.appState.currencies;
+    [self prepareData];
+    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
 }
 
+
+- (void)prepareData{
+    [self.currencySections removeAllObjects];
+    [self.sectionKeys removeAllObjects];
+    for(Currency *currency in self.filteredCurrencies){
+        NSString *key = [currency.countryName substringToIndex:1];
+        if (self.currencySections[key]){
+            NSMutableArray *array = self.currencySections[key];
+            [array addObject:currency];
+        } else {
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            [array addObject:currency];
+            [self.sectionKeys addObject:key];
+            self.currencySections[key] = array;
+        }
+    }
+    [self.tableView reloadData];
+}
+
+
 - (void) setupSearchBar{
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [AppState instance].screenWidth, 44.0f)];
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, [AppState instance].screenWidth, 30)];
     self.searchBar.delegate = self;
     self.searchBar.placeholder = @"Search by country";
+    self.searchBar.layer.cornerRadius = 36 / 2;
     self.navigationItem.titleView = self.searchBar;
-    //self.tableView.tableHeaderView = self.searchBar;
 }
 
 - (void) setupTableViewCell{
@@ -47,16 +73,29 @@ static NSString *nibName = @"CountryCell";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.sectionKeys.count;
+}
+
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return self.sectionKeys;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return self.sectionKeys[section];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.filteredCurrencies.count;
+    NSArray *items = [self.currencySections objectForKey:self.sectionKeys[section]];
+    return items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CountryCell *cell = [tableView dequeueReusableCellWithIdentifier:nibName forIndexPath:indexPath];
-    Currency *currency = self.filteredCurrencies[indexPath.row];
+    if(indexPath.row == 0){
+        cell.separatorInset = UIEdgeInsetsMake(100, 0, 0, 0);
+    }
+    NSString *key = self.sectionKeys[indexPath.section];
+    Currency *currency = self.currencySections[key][indexPath.row];
     NSString *symbol = @"";
     if (currency.currencySymbol) {
         symbol = [NSString stringWithFormat:@"(%@)",currency.currencySymbol];
@@ -71,9 +110,8 @@ static NSString *nibName = @"CountryCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Currency *currency = nil;
-    currency = self.filteredCurrencies[indexPath.row];
-    [self.delegate dataFromController: currency];
-    [self.navigationController popViewControllerAnimated:YES];
+    currency = self.currencySections[self.sectionKeys[indexPath.section]][indexPath.row];
+    [self.delegate currencyTableVC:self selectedCurrency:currency];
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
@@ -90,7 +128,7 @@ static NSString *nibName = @"CountryCell";
             }
         }
     }
-    [self.tableView reloadData];
+    [self prepareData];
 }
 
 @end

@@ -22,9 +22,7 @@
 - (void) getJsonResponse:(NSString *) urlStr
                 success:(FANetworksuccessBlock)success
                 failure:(FANetworkErrorBlock)failure {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    });
+    
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainVC-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="4EE-dO-e9g">
             <objects>
-                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O51-Ue-zvq" customClass="MainVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O51-Ue-zvq" customClass="MainTabBarController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5F1-9b-aoo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o10-n6-Uvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-69.599999999999994" y="-153.37331334332833"/>
+            <point key="canvasLocation" x="74" y="-153"/>
         </scene>
     </scenes>
 </document>
