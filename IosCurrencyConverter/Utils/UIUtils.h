@@ -17,4 +17,6 @@
 
 + (void) repositioningView: (UIView *) view vertical: (float) vertical horizontal: (float) horizontal;
 
++ (void) shakeView: (UIView *) view repeat:(int)repeat point:(float)point;
+
 @end

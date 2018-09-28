@@ -104,6 +104,7 @@
 - (void)selectCurrencyNumber: (int) currencyNumber {
     CurrencyTableVC *controller = [[CurrencyTableVC alloc] init];
     controller.viewTitle = [NSString stringWithFormat:@"Select Currency %d",currencyNumber];
+    controller.excludeCurrencies = @[self.currency1, self.currency2];
     controller.delegate = self;
     [self.navigationController pushViewController:controller animated:YES];
 }
@@ -190,7 +191,7 @@
             if(self.currency1 != currency){
                 alreadySelected = NO;
                 self.currency1 = currency;
-                [UIUtils repositioningView:self.imageViewCurrency1 vertical:50 horizontal:0];
+                [UIUtils shakeView:self.viewCurrency1 repeat:3 point:20];
             }
         }
     }
@@ -200,8 +201,7 @@
             if(self.currency2 != currency) {
                 alreadySelected = NO;
                 self.currency2 = currency;
-                [UIUtils repositioningView:self.imageViewCurrency2 vertical:50 horizontal:0];
-                
+                 [UIUtils shakeView:self.viewCurrency2 repeat:3 point:20];
             }
         }
     }

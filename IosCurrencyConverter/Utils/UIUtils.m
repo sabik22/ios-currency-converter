@@ -33,4 +33,17 @@
                      completion:nil];
 }
 
++ (void) shakeView: (UIView *) view repeat:(int)repeat point:(float)point{
+    CABasicAnimation *animation =
+    [CABasicAnimation animationWithKeyPath:@"position"];
+    [animation setDuration:0.05];
+    [animation setRepeatCount:repeat];
+    [animation setAutoreverses:YES];
+    [animation setFromValue:[NSValue valueWithCGPoint:
+                             CGPointMake([view center].x - point, [view center].y)]];
+    [animation setToValue:[NSValue valueWithCGPoint:
+                           CGPointMake([view center].x + point, [view center].y)]];
+    [[view layer] addAnimation:animation forKey:@"position"];
+}
+
 @end

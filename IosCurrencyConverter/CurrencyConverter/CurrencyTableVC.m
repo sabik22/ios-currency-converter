@@ -47,8 +47,7 @@ static NSString *nibName = @"CountryCell";
     for(Currency *currency in self.filteredCurrencies){
         NSString *key = [currency.countryName substringToIndex:1];
         if (self.currencySections[key]){
-            NSMutableArray *array = self.currencySections[key];
-            [array addObject:currency];
+            [self.currencySections[key] addObject:currency];
         } else {
             NSMutableArray *array = [[NSMutableArray alloc] init];
             [array addObject:currency];
