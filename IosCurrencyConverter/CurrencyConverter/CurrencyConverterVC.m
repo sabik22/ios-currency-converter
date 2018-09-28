@@ -207,8 +207,6 @@
     }
     
     if(alreadySelected){
-        [AlertUtils showAlert:[NSString stringWithFormat:@"%@ is already selected",
-                               currency.currencyID] duration:1 controller:self];
         return;
     }
     [self updateCurrencyLabel];

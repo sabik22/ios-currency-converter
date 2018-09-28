@@ -36,10 +36,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="ACf-ki-Zwp">
+                                <rect key="frame" x="282" y="23" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4WV-OO-ULq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="PVe-xN-an1"/>
+                                    <constraint firstAttribute="width" constant="30" id="Z1J-Io-Eg4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="vJH-9j-Mch"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Umm-rY-4kQ" firstAttribute="leading" secondItem="tYH-CT-Moc" secondAttribute="leading" constant="20" id="8Hz-zw-ByC"/>
+                            <constraint firstAttribute="trailing" secondItem="ACf-ki-Zwp" secondAttribute="trailing" constant="8" id="Djo-Q0-IPF"/>
+                            <constraint firstItem="ACf-ki-Zwp" firstAttribute="centerY" secondItem="tYH-CT-Moc" secondAttribute="centerY" id="IK0-qP-4lQ"/>
                             <constraint firstItem="nUj-dl-fZz" firstAttribute="leading" secondItem="Umm-rY-4kQ" secondAttribute="trailing" constant="15" id="LES-f8-zsp"/>
                             <constraint firstItem="nUj-dl-fZz" firstAttribute="centerY" secondItem="tYH-CT-Moc" secondAttribute="centerY" id="UUc-5p-Pyb"/>
                             <constraint firstItem="Umm-rY-4kQ" firstAttribute="centerY" secondItem="tYH-CT-Moc" secondAttribute="centerY" id="vNj-74-UPv"/>
@@ -56,9 +67,13 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="imageViewIcon" destination="Umm-rY-4kQ" id="0ZV-PK-59N"/>
+                <outlet property="imageViewSelected" destination="ACf-ki-Zwp" id="HAH-Cf-2Y2"/>
                 <outlet property="labelTitle" destination="nUj-dl-fZz" id="tic-pQ-QHy"/>
             </connections>
             <point key="canvasLocation" x="26" y="68"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="tick" width="24" height="24"/>
+    </resources>
 </document>

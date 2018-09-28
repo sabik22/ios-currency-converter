@@ -36,12 +36,21 @@ static NSString *nibName = @"CountryCell";
     [self setupTableViewCell];
     self.appState = [AppState instance];
     self.filteredCurrencies = self.appState.currencies;
-    [self prepareData];
+    [self prepareSectionData];
+    
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
 }
 
+- (BOOL) isExcludedCurrency: (Currency *) currency{
+    for(Currency *cur in self.excludeCurrencies){
+        if([currency.countryID.uppercaseString isEqualToString:cur.countryID.uppercaseString])
+            return YES;
+    }
+    return false;
+}
 
-- (void)prepareData{
+
+- (void)prepareSectionData{
     [self.currencySections removeAllObjects];
     [self.sectionKeys removeAllObjects];
     for(Currency *currency in self.filteredCurrencies){
@@ -104,6 +113,7 @@ static NSString *nibName = @"CountryCell";
     [cell.imageViewIcon setImage:[UIImage imageNamed: imageName.lowercaseString]];
     [UIUtils roundImage:cell.imageViewIcon radius:15.0f border:1.0f borderColor:[UIColor lightGrayColor]];
     cell.imageViewIcon.clipsToBounds = YES;
+    cell.imageViewSelected.hidden = ![self isExcludedCurrency:currency];
     return cell;
 }
 
@@ -127,7 +137,7 @@ static NSString *nibName = @"CountryCell";
             }
         }
     }
-    [self prepareData];
+    [self prepareSectionData];
 }
 
 @end
