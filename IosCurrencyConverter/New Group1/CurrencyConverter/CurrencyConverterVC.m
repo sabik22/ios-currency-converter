@@ -9,7 +9,7 @@
 #import "CurrencyConverterVC.h"
 #import "Currency.h"
 #import "AppState.h"
-#import "../Utils/Utils.h"
+#import "Utils.h"
 #import "CurrencyService.h"
 
 
@@ -63,7 +63,13 @@
                       forControlEvents:UIControlEventEditingChanged];
     self.navigationController.view.backgroundColor = [UIColor colorWithRed:0.0f green:145.0f/255.0f blue:147.0f/255.0f alpha:1];
 
-   
+    if (!self.appState.isFavoriteCurrencySelected){
+        [AlertUtils showTwoActionsAlertWithTitle:@"Favorite currency" message:@"Please select your favorite currency." positiveText:@"Now" negativeText:@"Later" controller:self onAction:^(BOOL isPositive) {
+            if (isPositive){
+                [self selectCurrencyNumber:0];
+            }
+        }];
+    }
 }
 
 - (void)textFieldCurrency1DidChange:(UITextField *)textField {
@@ -106,7 +112,8 @@
 - (void)selectCurrencyNumber: (int) currencyNumber {
     CurrencyTableVC *controller = [[CurrencyTableVC alloc] init];
     controller.index = currencyNumber;
-    controller.excludeCurrencies = @[self.currency1, self.currency2];
+    if(currencyNumber != 0)
+        controller.excludeCurrencies = @[self.currency1, self.currency2];
     controller.delegate = self;
     [self.navigationController pushViewController:controller animated:YES];
 }
@@ -188,6 +195,14 @@
 - (void)currencyTableVC:(CurrencyTableVC *)currencyTableVC selectedCurrency:(Currency *)currency keyIndex:(int)keyIndex{
     [currencyTableVC.navigationController popViewControllerAnimated:YES];
     BOOL alreadySelected=YES;
+    if(keyIndex == 0){
+        self.appState.isFavoriteCurrencySelected = true;
+        self.appState.defaultCurrency1 = currency;
+        self.currency1 = currency;
+        [self.appState saveToLocal];
+        alreadySelected = NO;
+    }
+    
     if(keyIndex == 1){
         if(![self.currency2.countryID isEqualToString:currency.countryID]){
             if(self.currency1 != currency){

@@ -20,14 +20,12 @@
 		07967D7B2158B99F00E2114A /* EncodeDecodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07967D7A2158B99F00E2114A /* EncodeDecodeUtils.m */; };
 		07AF8ED3215A05A50065000E /* ICCError.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF8ED1215A05A50065000E /* ICCError.m */; };
 		07AF8EDE215A4B9A0065000E /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF8EDD215A4B990065000E /* MainTabBarController.m */; };
-		07AF8EE0215A57910065000E /* MainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AF8EDF215A57910065000E /* MainVC.storyboard */; };
+		07AF8EE0215A57910065000E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AF8EDF215A57910065000E /* Main.storyboard */; };
 		07AF8EE2215A61E50065000E /* CurrencyConverterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AF8EE1215A61E50065000E /* CurrencyConverterVC.storyboard */; };
 		07C7358E2158D68700C60A61 /* AppInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7358D2158D68700C60A61 /* AppInitializer.m */; };
 		07C735912158E97900C60A61 /* ExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C735902158E97900C60A61 /* ExchangeRate.m */; };
 		07C735942158EF6800C60A61 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C735932158EF6800C60A61 /* DateUtils.m */; };
 		07E36BCB214FC05B00C2811B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E36BCA214FC05B00C2811B /* AppDelegate.m */; };
-		07E36BCE214FC05B00C2811B /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E36BCD214FC05B00C2811B /* DashboardViewController.m */; };
-		07E36BD1214FC05B00C2811B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E36BCF214FC05B00C2811B /* Main.storyboard */; };
 		07E36BD3214FC05D00C2811B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E36BD2214FC05D00C2811B /* Assets.xcassets */; };
 		07E36BD6214FC05D00C2811B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E36BD4214FC05D00C2811B /* LaunchScreen.storyboard */; };
 		07E36BD9214FC05D00C2811B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E36BD8214FC05D00C2811B /* main.m */; };
@@ -62,7 +60,7 @@
 		07AF8ED1215A05A50065000E /* ICCError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCError.m; sourceTree = "<group>"; };
 		07AF8EDC215A4B990065000E /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		07AF8EDD215A4B990065000E /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
-		07AF8EDF215A57910065000E /* MainVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainVC.storyboard; sourceTree = "<group>"; };
+		07AF8EDF215A57910065000E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		07AF8EE1215A61E50065000E /* CurrencyConverterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrencyConverterVC.storyboard; sourceTree = "<group>"; };
 		07C7358C2158D68700C60A61 /* AppInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInitializer.h; sourceTree = "<group>"; };
 		07C7358D2158D68700C60A61 /* AppInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInitializer.m; sourceTree = "<group>"; };
@@ -73,9 +71,6 @@
 		07E36BC6214FC05B00C2811B /* IosCurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosCurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E36BC9214FC05B00C2811B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07E36BCA214FC05B00C2811B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		07E36BCC214FC05B00C2811B /* DashboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
-		07E36BCD214FC05B00C2811B /* DashboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
-		07E36BD0214FC05B00C2811B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07E36BD2214FC05D00C2811B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07E36BD5214FC05D00C2811B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07E36BD7214FC05D00C2811B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +99,8 @@
 		070B5F69215188F700C3BC84 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				07C7358C2158D68700C60A61 /* AppInitializer.h */,
+				07C7358D2158D68700C60A61 /* AppInitializer.m */,
 				070B5F6A2151892700C3BC84 /* AlertUtils.h */,
 				070B5F6B2151892700C3BC84 /* AlertUtils.m */,
 				073F2631215250C80078C978 /* UIUtils.h */,
@@ -123,6 +120,8 @@
 		0730A421215037BF00DBFC46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0730A4292150D29D00DBFC46 /* AppState.h */,
+				0730A42A2150D29D00DBFC46 /* AppState.m */,
 				0730A4222150381F00DBFC46 /* Currency.h */,
 				0730A4232150381F00DBFC46 /* Currency.m */,
 				07C7358F2158E97900C60A61 /* ExchangeRate.h */,
@@ -166,7 +165,7 @@
 			children = (
 				07AF8EDC215A4B990065000E /* MainTabBarController.h */,
 				07AF8EDD215A4B990065000E /* MainTabBarController.m */,
-				07AF8EDF215A57910065000E /* MainVC.storyboard */,
+				07AF8EDF215A57910065000E /* Main.storyboard */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -192,36 +191,16 @@
 		07E36BC8214FC05B00C2811B /* IosCurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
-				07AF8EDB215A495E0065000E /* MainVC */,
+				07FD1D54215EA17700FB2987 /* Others */,
+				07FD1D53215EA10A00FB2987 /* Views */,
 				07AF8ECB215A042D0065000E /* Error */,
 				0730A4252150D27400DBFC46 /* API */,
-				07FCEEE62153CAC000AF258A /* CurrencyConverter */,
-				073F262B21521A050078C978 /* Cells */,
 				070B5F69215188F700C3BC84 /* Utils */,
-				07E36BE6214FC97F00C2811B /* Dashboard */,
 				0730A421215037BF00DBFC46 /* Model */,
-				07E36BC9214FC05B00C2811B /* AppDelegate.h */,
-				07E36BCA214FC05B00C2811B /* AppDelegate.m */,
-				07E36BCF214FC05B00C2811B /* Main.storyboard */,
 				07E36BD2214FC05D00C2811B /* Assets.xcassets */,
-				07E36BD4214FC05D00C2811B /* LaunchScreen.storyboard */,
 				07E36BD7214FC05D00C2811B /* Info.plist */,
-				07E36BD8214FC05D00C2811B /* main.m */,
-				0730A4292150D29D00DBFC46 /* AppState.h */,
-				0730A42A2150D29D00DBFC46 /* AppState.m */,
-				07C7358C2158D68700C60A61 /* AppInitializer.h */,
-				07C7358D2158D68700C60A61 /* AppInitializer.m */,
 			);
 			path = IosCurrencyConverter;
-			sourceTree = "<group>";
-		};
-		07E36BE6214FC97F00C2811B /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				07E36BCC214FC05B00C2811B /* DashboardViewController.h */,
-				07E36BCD214FC05B00C2811B /* DashboardViewController.m */,
-			);
-			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		07FCEEE62153CAC000AF258A /* CurrencyConverter */ = {
@@ -234,6 +213,28 @@
 				07AF8EE1215A61E50065000E /* CurrencyConverterVC.storyboard */,
 			);
 			path = CurrencyConverter;
+			sourceTree = "<group>";
+		};
+		07FD1D53215EA10A00FB2987 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07FCEEE62153CAC000AF258A /* CurrencyConverter */,
+				073F262B21521A050078C978 /* Cells */,
+				07AF8EDB215A495E0065000E /* MainVC */,
+			);
+			name = Views;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		07FD1D54215EA17700FB2987 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				07E36BC9214FC05B00C2811B /* AppDelegate.h */,
+				07E36BCA214FC05B00C2811B /* AppDelegate.m */,
+				07E36BD4214FC05D00C2811B /* LaunchScreen.storyboard */,
+				07E36BD8214FC05D00C2811B /* main.m */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		57BFC4264FEFE5566924BD4E /* Frameworks */ = {
@@ -311,12 +312,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07AF8EE0215A57910065000E /* MainVC.storyboard in Resources */,
+				07AF8EE0215A57910065000E /* Main.storyboard in Resources */,
 				07AF8EE2215A61E50065000E /* CurrencyConverterVC.storyboard in Resources */,
 				073F263021521A250078C978 /* CountryCell.xib in Resources */,
 				07E36BD6214FC05D00C2811B /* LaunchScreen.storyboard in Resources */,
 				07E36BD3214FC05D00C2811B /* Assets.xcassets in Resources */,
-				07E36BD1214FC05B00C2811B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +353,6 @@
 				0730A42E2150FCA000DBFC46 /* ApiService.m in Sources */,
 				0709F80F2155F2A600A704BD /* NSUserDefaultsUtils.m in Sources */,
 				07AF8ED3215A05A50065000E /* ICCError.m in Sources */,
-				07E36BCE214FC05B00C2811B /* DashboardViewController.m in Sources */,
 				070B5F6C2151892700C3BC84 /* AlertUtils.m in Sources */,
 				07C735912158E97900C60A61 /* ExchangeRate.m in Sources */,
 				07C735942158EF6800C60A61 /* DateUtils.m in Sources */,
@@ -374,14 +373,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		07E36BCF214FC05B00C2811B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07E36BD0214FC05B00C2811B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		07E36BD4214FC05D00C2811B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

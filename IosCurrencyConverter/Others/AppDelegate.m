@@ -23,8 +23,8 @@
     [AppInitializer start];
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainVC" bundle:nil];
-    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MainVC"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MainTabBarController"];
     self.window.rootViewController = viewController;
     UINavigationBar.appearance.translucent = NO;
     UINavigationBar.appearance.barTintColor = [UIColor colorWithRed:0.0f green:145.0f/255.0f blue:147.0f/255.0f alpha:1];

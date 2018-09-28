@@ -7,7 +7,7 @@
 //
 
 #import "CurrencyTableVC.h"
-#import "../Model/Currency.h"
+#import "Currency.h"
 #import "AppState.h"
 #import "CountryCell.h"
 #import "Utils.h"
