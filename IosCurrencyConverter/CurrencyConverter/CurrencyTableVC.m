@@ -120,7 +120,7 @@ static NSString *nibName = @"CountryCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Currency *currency = nil;
     currency = self.currencySections[self.sectionKeys[indexPath.section]][indexPath.row];
-    [self.delegate currencyTableVC:self selectedCurrency:currency];
+    [self.delegate currencyTableVC:self selectedCurrency:currency keyIndex:self.index];
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{

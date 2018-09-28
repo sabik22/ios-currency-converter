@@ -12,6 +12,7 @@
 #import "../Utils/Utils.h"
 #import "CurrencyService.h"
 
+
 @interface CurrencyConverterVC ()
 
 @property (nonatomic, strong) AppState *appState;
@@ -61,6 +62,7 @@
                                 action:@selector(textFieldCurrency2DidChange:)
                       forControlEvents:UIControlEventEditingChanged];
     self.navigationController.view.backgroundColor = [UIColor colorWithRed:0.0f green:145.0f/255.0f blue:147.0f/255.0f alpha:1];
+
    
 }
 
@@ -103,7 +105,7 @@
 
 - (void)selectCurrencyNumber: (int) currencyNumber {
     CurrencyTableVC *controller = [[CurrencyTableVC alloc] init];
-    controller.viewTitle = [NSString stringWithFormat:@"Select Currency %d",currencyNumber];
+    controller.index = currencyNumber;
     controller.excludeCurrencies = @[self.currency1, self.currency2];
     controller.delegate = self;
     [self.navigationController pushViewController:controller animated:YES];
@@ -183,10 +185,10 @@
 
 #pragma mark - CurrencyTableVCDelegate
 
-- (void)currencyTableVC:(CurrencyTableVC *)currencyTableVC selectedCurrency:(Currency *)currency{
+- (void)currencyTableVC:(CurrencyTableVC *)currencyTableVC selectedCurrency:(Currency *)currency keyIndex:(int)keyIndex{
     [currencyTableVC.navigationController popViewControllerAnimated:YES];
     BOOL alreadySelected=YES;
-    if(self.selectedNumber == 1){
+    if(keyIndex == 1){
         if(![self.currency2.countryID isEqualToString:currency.countryID]){
             if(self.currency1 != currency){
                 alreadySelected = NO;
@@ -195,8 +197,7 @@
             }
         }
     }
-    
-    if(self.selectedNumber == 2){
+    if(keyIndex == 2){
         if(![self.currency1.currencyID isEqualToString:currency.currencyID]){
             if(self.currency2 != currency) {
                 alreadySelected = NO;
@@ -205,7 +206,6 @@
             }
         }
     }
-    
     if(alreadySelected){
         return;
     }

@@ -13,12 +13,12 @@
 @protocol CurrencyTableVCDelegate<NSObject>
 
 @required
-- (void)currencyTableVC:(CurrencyTableVC *)currencyTableVC selectedCurrency:(Currency *)currency;
+- (void)currencyTableVC:(CurrencyTableVC *)currencyTableVC selectedCurrency:(Currency *)currency keyIndex: (int) index;
 @end
 
 @interface CurrencyTableVC: UITableViewController<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
-@property (nonatomic, copy) NSString *viewTitle;
+@property (nonatomic) int index;
 @property (nonatomic, copy) NSArray *excludeCurrencies;
 @property (assign) id<CurrencyTableVCDelegate>delegate;
 

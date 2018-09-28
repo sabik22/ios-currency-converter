@@ -7,6 +7,7 @@ target 'IosCurrencyConverter' do
 
   # Pods for IosCurrencyConverter
   pod 'MBProgressHUD', '~> 1.1.0'
+  #pod 'Charts', '~> 3.0.5'
 
 
 end
