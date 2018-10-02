@@ -22,6 +22,7 @@
 
 NSString *urlCurrencyList = @"https://free.currencyconverterapi.com/api/v6/countries";
 NSString *urlBaseExchangeRate = @"http://data.fixer.io/api/latest?access_key=1cc3b37fd4fbbe47ceb38c554a4280c5&format=1";
+NSString *urlCurrencyHistory = @"https://free.currencyconverterapi.com/api/v6/convert?q={firstCombination},{secondCombination}&compact=ultra&date={fromDate}&endDate={toDate}";
 
 + (void) fetchCurrencies {
     CurrencyService *fetchCurrency = [[CurrencyService alloc] init];
@@ -51,7 +52,7 @@ NSString *urlBaseExchangeRate = @"http://data.fixer.io/api/latest?access_key=1cc
 }
 
 - (void) fetchCurrenciesWithCompletionHandler: (NSString *) empty
-                                      success:(void (^)(NSArray *array))success
+                                      success:(void (^)(NSArray *dictionary))success
                                       failure: (void (^)(NSError *error))failure{
     ApiService *service = [ApiService instance];
     [service getJsonResponse:urlCurrencyList
@@ -92,6 +93,39 @@ NSString *urlBaseExchangeRate = @"http://data.fixer.io/api/latest?access_key=1cc
             failure([ICCError dataNotFound]);
         });
     }
+    
+}
+
+- (void)fetchOneWeekHsitoryWithFirstCurrency:(NSString *) firstCurrency
+                       secondCurrency: (NSString *) secondCurrency
+                              success:(void (^)(NSDictionary *dictionary))success
+                              failure:(void (^)(NSError *error))failure{
+    NSString *url = urlCurrencyHistory;
+    url = [url stringByReplacingOccurrencesOfString:@"{firstCombination}" withString:[
+           NSString stringWithFormat:@"%@_%@",firstCurrency,secondCurrency]];
+    url = [url stringByReplacingOccurrencesOfString:@"{secondCombination}" withString:[
+           NSString stringWithFormat:@"%@_%@",secondCurrency,firstCurrency]];
+    NSDate *toDate = [[NSDate date] dateByAddingTimeInterval:-1*24*60*60];
+    NSDate *fromDate = [toDate dateByAddingTimeInterval:-6*24*60*60];
+    NSString *toDateString = [DateUtils stringFromDate:toDate  format:@"yyyy-MM-dd"];
+    NSString *fromDateString = [DateUtils stringFromDate:fromDate  format:@"yyyy-MM-dd"];
+    url = [url stringByReplacingOccurrencesOfString:@"{fromDate}" withString:fromDateString];
+    url = [url stringByReplacingOccurrencesOfString:@"{toDate}" withString:toDateString];
+    
+    
+    ApiService *service = [ApiService instance];
+    [service getJsonResponse:url
+                     success:^(NSDictionary *responseDict) {
+//                         NSString *key = [NSString stringWithFormat:@"%@-%@",firstCurrency,secondCurrency];
+//                         NSDictionary *results = responseDict[key];
+//                         NSArray *array = [[NSArray alloc] init];
+//                         for(NSString *key in results.allKeys){
+//
+//                         }
+                            success(responseDict);
+                     } failure:^(NSError *error) {
+                         failure(error);
+                     }];
     
 }
 

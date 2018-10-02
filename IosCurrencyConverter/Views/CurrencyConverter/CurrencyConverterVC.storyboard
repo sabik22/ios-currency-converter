@@ -191,6 +191,10 @@
                                             <action selector="changeAction:" destination="gmi-fJ-EmG" eventType="touchUpInside" id="ePt-6t-NAw"/>
                                         </connections>
                                     </button>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huj-xT-av9">
+                                        <rect key="frame" x="0.0" y="276" width="375" height="327"/>
+                                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -198,10 +202,14 @@
                                     <constraint firstItem="NmA-Eb-Gxg" firstAttribute="top" secondItem="fEu-SF-rGq" secondAttribute="bottom" constant="15" id="873-EG-dBn"/>
                                     <constraint firstAttribute="trailing" secondItem="7zd-1q-5l9" secondAttribute="trailing" constant="20" id="BfT-iE-Qln"/>
                                     <constraint firstItem="TVB-gZ-Bt0" firstAttribute="top" secondItem="xup-dA-8Zi" secondAttribute="top" constant="110" id="CDn-Zo-aDn"/>
+                                    <constraint firstAttribute="trailing" secondItem="huj-xT-av9" secondAttribute="trailing" id="GAB-Ul-U7O"/>
                                     <constraint firstAttribute="trailing" secondItem="fEu-SF-rGq" secondAttribute="trailing" constant="30" id="GaV-80-mgA"/>
                                     <constraint firstItem="TVB-gZ-Bt0" firstAttribute="centerX" secondItem="xup-dA-8Zi" secondAttribute="centerX" id="Ol5-el-ZMT"/>
+                                    <constraint firstItem="huj-xT-av9" firstAttribute="top" secondItem="NmA-Eb-Gxg" secondAttribute="bottom" constant="40" id="PEj-GU-nly"/>
+                                    <constraint firstItem="huj-xT-av9" firstAttribute="leading" secondItem="xup-dA-8Zi" secondAttribute="leading" id="Rpr-Ff-Lby"/>
                                     <constraint firstItem="NmA-Eb-Gxg" firstAttribute="leading" secondItem="xup-dA-8Zi" secondAttribute="leading" constant="20" id="UK3-ke-Kac"/>
                                     <constraint firstItem="fEu-SF-rGq" firstAttribute="top" secondItem="7zd-1q-5l9" secondAttribute="bottom" constant="15" id="ZTt-nW-h57"/>
+                                    <constraint firstAttribute="bottom" secondItem="huj-xT-av9" secondAttribute="bottom" id="cJc-Ly-JUo"/>
                                     <constraint firstItem="fEu-SF-rGq" firstAttribute="leading" secondItem="xup-dA-8Zi" secondAttribute="leading" constant="30" id="q4k-5c-4Ca"/>
                                     <constraint firstItem="7zd-1q-5l9" firstAttribute="leading" secondItem="xup-dA-8Zi" secondAttribute="leading" constant="20" id="q4s-KZ-aZm"/>
                                     <constraint firstItem="7zd-1q-5l9" firstAttribute="top" secondItem="xup-dA-8Zi" secondAttribute="top" constant="25" id="svM-Uw-x9P"/>
@@ -221,6 +229,7 @@
                     <navigationItem key="navigationItem" title="Converter" id="Ey3-7X-9Eu"/>
                     <connections>
                         <outlet property="buttonChange" destination="TVB-gZ-Bt0" id="2ff-Ow-SaZ"/>
+                        <outlet property="containerHistoryView" destination="huj-xT-av9" id="Rib-v0-jby"/>
                         <outlet property="imageViewCurrency1" destination="UIg-xx-wR1" id="RIt-wT-dtt"/>
                         <outlet property="imageViewCurrency2" destination="Vnf-aq-zeQ" id="Pbb-Xd-76j"/>
                         <outlet property="labelCurrency1" destination="6Cw-hV-OeF" id="ugb-fe-B1j"/>

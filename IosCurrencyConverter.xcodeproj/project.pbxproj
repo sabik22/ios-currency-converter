@@ -7,78 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0709F80F2155F2A600A704BD /* NSUserDefaultsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0709F80E2155F2A600A704BD /* NSUserDefaultsUtils.m */; };
-		070B5F6C2151892700C3BC84 /* AlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B5F6B2151892700C3BC84 /* AlertUtils.m */; };
-		0730A4242150381F00DBFC46 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4232150381F00DBFC46 /* Currency.m */; };
-		0730A4282150D28B00DBFC46 /* CurrencyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A4272150D28B00DBFC46 /* CurrencyService.m */; };
-		0730A42B2150D29D00DBFC46 /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A42A2150D29D00DBFC46 /* AppState.m */; };
-		0730A42E2150FCA000DBFC46 /* ApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0730A42D2150FCA000DBFC46 /* ApiService.m */; };
-		073F262F21521A250078C978 /* CountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F262D21521A250078C978 /* CountryCell.m */; };
-		073F263021521A250078C978 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 073F262E21521A250078C978 /* CountryCell.xib */; };
-		073F2633215250C80078C978 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F2632215250C80078C978 /* UIUtils.m */; };
-		073F26372152548E0078C978 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 073F26362152548E0078C978 /* Utils.m */; };
-		07967D7B2158B99F00E2114A /* EncodeDecodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07967D7A2158B99F00E2114A /* EncodeDecodeUtils.m */; };
-		07AF8ED3215A05A50065000E /* ICCError.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF8ED1215A05A50065000E /* ICCError.m */; };
-		07AF8EDE215A4B9A0065000E /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AF8EDD215A4B990065000E /* MainTabBarController.m */; };
-		07AF8EE0215A57910065000E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AF8EDF215A57910065000E /* Main.storyboard */; };
-		07AF8EE2215A61E50065000E /* CurrencyConverterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AF8EE1215A61E50065000E /* CurrencyConverterVC.storyboard */; };
-		07C7358E2158D68700C60A61 /* AppInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7358D2158D68700C60A61 /* AppInitializer.m */; };
-		07C735912158E97900C60A61 /* ExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C735902158E97900C60A61 /* ExchangeRate.m */; };
-		07C735942158EF6800C60A61 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C735932158EF6800C60A61 /* DateUtils.m */; };
-		07E36BCB214FC05B00C2811B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E36BCA214FC05B00C2811B /* AppDelegate.m */; };
+		079E187B21632B7800EB36FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079E184021632B7800EB36FD /* LaunchScreen.storyboard */; };
+		079E187C21632B7800EB36FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E184221632B7800EB36FD /* main.m */; };
+		079E187D21632B7800EB36FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E184321632B7800EB36FD /* AppDelegate.m */; };
+		079E187E21632B7800EB36FD /* CurrencyHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E184521632B7800EB36FD /* CurrencyHistory.m */; };
+		079E187F21632B7800EB36FD /* ExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E184A21632B7800EB36FD /* ExchangeRate.m */; };
+		079E188021632B7800EB36FD /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E184B21632B7800EB36FD /* AppState.m */; };
+		079E188121632B7800EB36FD /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E184C21632B7800EB36FD /* Currency.m */; };
+		079E188221632B7800EB36FD /* ApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E185121632B7800EB36FD /* ApiService.m */; };
+		079E188321632B7800EB36FD /* CurrencyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E185221632B7800EB36FD /* CurrencyService.m */; };
+		079E188421632B7800EB36FD /* CurrencyHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E185521632B7800EB36FD /* CurrencyHistoryCell.m */; };
+		079E188521632B7800EB36FD /* CountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E185621632B7800EB36FD /* CountryCell.m */; };
+		079E188621632B7800EB36FD /* CurrencyHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079E185821632B7800EB36FD /* CurrencyHistoryCell.xib */; };
+		079E188721632B7800EB36FD /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079E185921632B7800EB36FD /* CountryCell.xib */; };
+		079E188821632B7800EB36FD /* CurrencyConverterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079E185F21632B7800EB36FD /* CurrencyConverterVC.storyboard */; };
+		079E188921632B7800EB36FD /* CurrencyHistoryTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E186021632B7800EB36FD /* CurrencyHistoryTableVC.m */; };
+		079E188A21632B7800EB36FD /* CurrencyConverterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E186121632B7800EB36FD /* CurrencyConverterVC.m */; };
+		079E188B21632B7800EB36FD /* CurrencyTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E186221632B7800EB36FD /* CurrencyTableVC.m */; };
+		079E188D21632B7800EB36FD /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E186521632B7800EB36FD /* MainTabBarController.m */; };
+		079E188E21632B7800EB36FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079E186621632B7800EB36FD /* Main.storyboard */; };
+		079E189621632B7800EB36FD /* ICCError.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E187A21632B7800EB36FD /* ICCError.m */; };
+		079E18B121632F3800EB36FD /* NSUserDefaultsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E18A421632F3800EB36FD /* NSUserDefaultsUtils.m */; };
+		079E18B221632F3800EB36FD /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E18A521632F3800EB36FD /* DateUtils.m */; };
+		079E18B321632F3800EB36FD /* AlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E18A621632F3800EB36FD /* AlertUtils.m */; };
+		079E18B421632F3800EB36FD /* AppInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E18A721632F3800EB36FD /* AppInitializer.m */; };
+		079E18B521632F3800EB36FD /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E18AB21632F3800EB36FD /* Utils.m */; };
+		079E18B621632F3800EB36FD /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E18AE21632F3800EB36FD /* UIUtils.m */; };
+		079E18B721632F3800EB36FD /* EncodeDecodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E18AF21632F3800EB36FD /* EncodeDecodeUtils.m */; };
 		07E36BD3214FC05D00C2811B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E36BD2214FC05D00C2811B /* Assets.xcassets */; };
-		07E36BD6214FC05D00C2811B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E36BD4214FC05D00C2811B /* LaunchScreen.storyboard */; };
-		07E36BD9214FC05D00C2811B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E36BD8214FC05D00C2811B /* main.m */; };
-		07FCEEEB2153CAC000AF258A /* CurrencyConverterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FCEEE92153CAC000AF258A /* CurrencyConverterVC.m */; };
-		07FCEEEC2153CAC000AF258A /* CurrencyTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FCEEEA2153CAC000AF258A /* CurrencyTableVC.m */; };
 		DF072C70DDA738E8A3F66C66 /* libPods-IosCurrencyConverter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D48C3B9AD51DEE68A2731D50 /* libPods-IosCurrencyConverter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0709F80D2155F2A600A704BD /* NSUserDefaultsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsUtils.h; sourceTree = "<group>"; };
-		0709F80E2155F2A600A704BD /* NSUserDefaultsUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsUtils.m; sourceTree = "<group>"; };
-		070B5F6A2151892700C3BC84 /* AlertUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertUtils.h; sourceTree = "<group>"; };
-		070B5F6B2151892700C3BC84 /* AlertUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertUtils.m; sourceTree = "<group>"; };
-		0730A4222150381F00DBFC46 /* Currency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
-		0730A4232150381F00DBFC46 /* Currency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
-		0730A4262150D28B00DBFC46 /* CurrencyService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrencyService.h; sourceTree = "<group>"; };
-		0730A4272150D28B00DBFC46 /* CurrencyService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrencyService.m; sourceTree = "<group>"; };
-		0730A4292150D29D00DBFC46 /* AppState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
-		0730A42A2150D29D00DBFC46 /* AppState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
-		0730A42C2150FCA000DBFC46 /* ApiService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiService.h; sourceTree = "<group>"; };
-		0730A42D2150FCA000DBFC46 /* ApiService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiService.m; sourceTree = "<group>"; };
-		073F262C21521A250078C978 /* CountryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryCell.h; sourceTree = "<group>"; };
-		073F262D21521A250078C978 /* CountryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryCell.m; sourceTree = "<group>"; };
-		073F262E21521A250078C978 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
-		073F2631215250C80078C978 /* UIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
-		073F2632215250C80078C978 /* UIUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
-		073F26352152548E0078C978 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		073F26362152548E0078C978 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		07967D792158B99F00E2114A /* EncodeDecodeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncodeDecodeUtils.h; sourceTree = "<group>"; };
-		07967D7A2158B99F00E2114A /* EncodeDecodeUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncodeDecodeUtils.m; sourceTree = "<group>"; };
-		07AF8ED0215A059B0065000E /* ICCError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCError.h; sourceTree = "<group>"; };
-		07AF8ED1215A05A50065000E /* ICCError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCError.m; sourceTree = "<group>"; };
-		07AF8EDC215A4B990065000E /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
-		07AF8EDD215A4B990065000E /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
-		07AF8EDF215A57910065000E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		07AF8EE1215A61E50065000E /* CurrencyConverterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrencyConverterVC.storyboard; sourceTree = "<group>"; };
-		07C7358C2158D68700C60A61 /* AppInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInitializer.h; sourceTree = "<group>"; };
-		07C7358D2158D68700C60A61 /* AppInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInitializer.m; sourceTree = "<group>"; };
-		07C7358F2158E97900C60A61 /* ExchangeRate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExchangeRate.h; sourceTree = "<group>"; };
-		07C735902158E97900C60A61 /* ExchangeRate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeRate.m; sourceTree = "<group>"; };
-		07C735922158EF6800C60A61 /* DateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
-		07C735932158EF6800C60A61 /* DateUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
+		079E183F21632B7800EB36FD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		079E184121632B7800EB36FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		079E184221632B7800EB36FD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		079E184321632B7800EB36FD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		079E184521632B7800EB36FD /* CurrencyHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyHistory.m; sourceTree = "<group>"; };
+		079E184621632B7800EB36FD /* ExchangeRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeRate.h; sourceTree = "<group>"; };
+		079E184721632B7800EB36FD /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
+		079E184821632B7800EB36FD /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
+		079E184921632B7800EB36FD /* CurrencyHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyHistory.h; sourceTree = "<group>"; };
+		079E184A21632B7800EB36FD /* ExchangeRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeRate.m; sourceTree = "<group>"; };
+		079E184B21632B7800EB36FD /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
+		079E184C21632B7800EB36FD /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
+		079E184E21632B7800EB36FD /* CurrencyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyService.h; sourceTree = "<group>"; };
+		079E184F21632B7800EB36FD /* ApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiService.h; sourceTree = "<group>"; };
+		079E185121632B7800EB36FD /* ApiService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiService.m; sourceTree = "<group>"; };
+		079E185221632B7800EB36FD /* CurrencyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyService.m; sourceTree = "<group>"; };
+		079E185521632B7800EB36FD /* CurrencyHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyHistoryCell.m; sourceTree = "<group>"; };
+		079E185621632B7800EB36FD /* CountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryCell.m; sourceTree = "<group>"; };
+		079E185721632B7800EB36FD /* CurrencyHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyHistoryCell.h; sourceTree = "<group>"; };
+		079E185821632B7800EB36FD /* CurrencyHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencyHistoryCell.xib; sourceTree = "<group>"; };
+		079E185921632B7800EB36FD /* CountryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		079E185A21632B7800EB36FD /* CountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryCell.h; sourceTree = "<group>"; };
+		079E185C21632B7800EB36FD /* CurrencyTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyTableVC.h; sourceTree = "<group>"; };
+		079E185D21632B7800EB36FD /* CurrencyConverterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyConverterVC.h; sourceTree = "<group>"; };
+		079E185E21632B7800EB36FD /* CurrencyHistoryTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyHistoryTableVC.h; sourceTree = "<group>"; };
+		079E185F21632B7800EB36FD /* CurrencyConverterVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CurrencyConverterVC.storyboard; sourceTree = "<group>"; };
+		079E186021632B7800EB36FD /* CurrencyHistoryTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyHistoryTableVC.m; sourceTree = "<group>"; };
+		079E186121632B7800EB36FD /* CurrencyConverterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyConverterVC.m; sourceTree = "<group>"; };
+		079E186221632B7800EB36FD /* CurrencyTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyTableVC.m; sourceTree = "<group>"; };
+		079E186521632B7800EB36FD /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		079E186621632B7800EB36FD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		079E186821632B7800EB36FD /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		079E187921632B7800EB36FD /* ICCError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCError.h; sourceTree = "<group>"; };
+		079E187A21632B7800EB36FD /* ICCError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCError.m; sourceTree = "<group>"; };
+		079E18A321632F3800EB36FD /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		079E18A421632F3800EB36FD /* NSUserDefaultsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsUtils.m; sourceTree = "<group>"; };
+		079E18A521632F3800EB36FD /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
+		079E18A621632F3800EB36FD /* AlertUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertUtils.m; sourceTree = "<group>"; };
+		079E18A721632F3800EB36FD /* AppInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInitializer.m; sourceTree = "<group>"; };
+		079E18A821632F3800EB36FD /* EncodeDecodeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodeDecodeUtils.h; sourceTree = "<group>"; };
+		079E18A921632F3800EB36FD /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
+		079E18AA21632F3800EB36FD /* NSUserDefaultsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsUtils.h; sourceTree = "<group>"; };
+		079E18AB21632F3800EB36FD /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		079E18AC21632F3800EB36FD /* AlertUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertUtils.h; sourceTree = "<group>"; };
+		079E18AD21632F3800EB36FD /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		079E18AE21632F3800EB36FD /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
+		079E18AF21632F3800EB36FD /* EncodeDecodeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodeDecodeUtils.m; sourceTree = "<group>"; };
+		079E18B021632F3800EB36FD /* AppInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInitializer.h; sourceTree = "<group>"; };
 		07E36BC6214FC05B00C2811B /* IosCurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosCurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		07E36BC9214FC05B00C2811B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		07E36BCA214FC05B00C2811B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		07E36BD2214FC05D00C2811B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		07E36BD5214FC05D00C2811B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07E36BD7214FC05D00C2811B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07E36BD8214FC05D00C2811B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07FCEEE72153CAC000AF258A /* CurrencyTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyTableVC.h; sourceTree = "<group>"; };
-		07FCEEE82153CAC000AF258A /* CurrencyConverterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyConverterVC.h; sourceTree = "<group>"; };
-		07FCEEE92153CAC000AF258A /* CurrencyConverterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyConverterVC.m; sourceTree = "<group>"; };
-		07FCEEEA2153CAC000AF258A /* CurrencyTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyTableVC.m; sourceTree = "<group>"; };
 		772A33517C863A84F28AF2CD /* Pods-IosCurrencyConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosCurrencyConverter.release.xcconfig"; path = "Pods/Target Support Files/Pods-IosCurrencyConverter/Pods-IosCurrencyConverter.release.xcconfig"; sourceTree = "<group>"; };
 		C0E523E317C8DCD8B1DB09B8 /* Pods-IosCurrencyConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosCurrencyConverter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosCurrencyConverter/Pods-IosCurrencyConverter.debug.xcconfig"; sourceTree = "<group>"; };
 		D48C3B9AD51DEE68A2731D50 /* libPods-IosCurrencyConverter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IosCurrencyConverter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,78 +107,206 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		070B5F69215188F700C3BC84 /* Utils */ = {
+		079E183E21632B7800EB36FD /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				07C7358C2158D68700C60A61 /* AppInitializer.h */,
-				07C7358D2158D68700C60A61 /* AppInitializer.m */,
-				070B5F6A2151892700C3BC84 /* AlertUtils.h */,
-				070B5F6B2151892700C3BC84 /* AlertUtils.m */,
-				073F2631215250C80078C978 /* UIUtils.h */,
-				073F2632215250C80078C978 /* UIUtils.m */,
-				073F26352152548E0078C978 /* Utils.h */,
-				073F26362152548E0078C978 /* Utils.m */,
-				0709F80D2155F2A600A704BD /* NSUserDefaultsUtils.h */,
-				0709F80E2155F2A600A704BD /* NSUserDefaultsUtils.m */,
-				07967D792158B99F00E2114A /* EncodeDecodeUtils.h */,
-				07967D7A2158B99F00E2114A /* EncodeDecodeUtils.m */,
-				07C735922158EF6800C60A61 /* DateUtils.h */,
-				07C735932158EF6800C60A61 /* DateUtils.m */,
+				079E183F21632B7800EB36FD /* AppDelegate.h */,
+				079E184321632B7800EB36FD /* AppDelegate.m */,
+				079E184021632B7800EB36FD /* LaunchScreen.storyboard */,
+				079E184221632B7800EB36FD /* main.m */,
 			);
-			path = Utils;
+			path = Others;
 			sourceTree = "<group>";
 		};
-		0730A421215037BF00DBFC46 /* Model */ = {
+		079E184421632B7800EB36FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0730A4292150D29D00DBFC46 /* AppState.h */,
-				0730A42A2150D29D00DBFC46 /* AppState.m */,
-				0730A4222150381F00DBFC46 /* Currency.h */,
-				0730A4232150381F00DBFC46 /* Currency.m */,
-				07C7358F2158E97900C60A61 /* ExchangeRate.h */,
-				07C735902158E97900C60A61 /* ExchangeRate.m */,
+				079E189F21632EC300EB36FD /* Currency */,
+				079E189E21632EB500EB36FD /* ExchangeRate */,
+				079E189D21632EA300EB36FD /* CurrencyHistory */,
+				079E189C21632E9100EB36FD /* AppState */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0730A4252150D27400DBFC46 /* API */ = {
+		079E184D21632B7800EB36FD /* API */ = {
 			isa = PBXGroup;
 			children = (
-				0730A4262150D28B00DBFC46 /* CurrencyService.h */,
-				0730A4272150D28B00DBFC46 /* CurrencyService.m */,
-				0730A42C2150FCA000DBFC46 /* ApiService.h */,
-				0730A42D2150FCA000DBFC46 /* ApiService.m */,
+				079E18A121632EE500EB36FD /* ApiService */,
+				079E18A021632ED500EB36FD /* CurrencyService */,
 			);
 			path = API;
 			sourceTree = "<group>";
 		};
-		073F262B21521A050078C978 /* Cells */ = {
+		079E185321632B7800EB36FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				073F262C21521A250078C978 /* CountryCell.h */,
-				073F262D21521A250078C978 /* CountryCell.m */,
-				073F262E21521A250078C978 /* CountryCell.xib */,
+				079E185421632B7800EB36FD /* Cells */,
+				079E185B21632B7800EB36FD /* CurrencyConverter */,
+				079E186321632B7800EB36FD /* MainVC */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		079E185421632B7800EB36FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				079E189821632D3D00EB36FD /* CountryCell */,
+				079E189721632D1400EB36FD /* CurrencyHistoryCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		07AF8ECB215A042D0065000E /* Error */ = {
+		079E185B21632B7800EB36FD /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
-				07AF8ED0215A059B0065000E /* ICCError.h */,
-				07AF8ED1215A05A50065000E /* ICCError.m */,
+				079E189B21632D9C00EB36FD /* CurrencyConverterView */,
+				079E189A21632D7E00EB36FD /* CurrencyHistoryTableView */,
+				079E189921632D5B00EB36FD /* CurrencyTableView */,
+				079E185F21632B7800EB36FD /* CurrencyConverterVC.storyboard */,
+			);
+			path = CurrencyConverter;
+			sourceTree = "<group>";
+		};
+		079E186321632B7800EB36FD /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				079E186521632B7800EB36FD /* MainTabBarController.m */,
+				079E186621632B7800EB36FD /* Main.storyboard */,
+				079E186821632B7800EB36FD /* MainTabBarController.h */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		079E187821632B7800EB36FD /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				079E187921632B7800EB36FD /* ICCError.h */,
+				079E187A21632B7800EB36FD /* ICCError.m */,
 			);
 			path = Error;
 			sourceTree = "<group>";
 		};
-		07AF8EDB215A495E0065000E /* MainVC */ = {
+		079E189721632D1400EB36FD /* CurrencyHistoryCell */ = {
 			isa = PBXGroup;
 			children = (
-				07AF8EDC215A4B990065000E /* MainTabBarController.h */,
-				07AF8EDD215A4B990065000E /* MainTabBarController.m */,
-				07AF8EDF215A57910065000E /* Main.storyboard */,
+				079E185721632B7800EB36FD /* CurrencyHistoryCell.h */,
+				079E185521632B7800EB36FD /* CurrencyHistoryCell.m */,
+				079E185821632B7800EB36FD /* CurrencyHistoryCell.xib */,
 			);
-			path = MainVC;
+			path = CurrencyHistoryCell;
+			sourceTree = "<group>";
+		};
+		079E189821632D3D00EB36FD /* CountryCell */ = {
+			isa = PBXGroup;
+			children = (
+				079E185A21632B7800EB36FD /* CountryCell.h */,
+				079E185621632B7800EB36FD /* CountryCell.m */,
+				079E185921632B7800EB36FD /* CountryCell.xib */,
+			);
+			path = CountryCell;
+			sourceTree = "<group>";
+		};
+		079E189921632D5B00EB36FD /* CurrencyTableView */ = {
+			isa = PBXGroup;
+			children = (
+				079E185C21632B7800EB36FD /* CurrencyTableVC.h */,
+				079E186221632B7800EB36FD /* CurrencyTableVC.m */,
+			);
+			path = CurrencyTableView;
+			sourceTree = "<group>";
+		};
+		079E189A21632D7E00EB36FD /* CurrencyHistoryTableView */ = {
+			isa = PBXGroup;
+			children = (
+				079E185E21632B7800EB36FD /* CurrencyHistoryTableVC.h */,
+				079E186021632B7800EB36FD /* CurrencyHistoryTableVC.m */,
+			);
+			path = CurrencyHistoryTableView;
+			sourceTree = "<group>";
+		};
+		079E189B21632D9C00EB36FD /* CurrencyConverterView */ = {
+			isa = PBXGroup;
+			children = (
+				079E185D21632B7800EB36FD /* CurrencyConverterVC.h */,
+				079E186121632B7800EB36FD /* CurrencyConverterVC.m */,
+			);
+			path = CurrencyConverterView;
+			sourceTree = "<group>";
+		};
+		079E189C21632E9100EB36FD /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				079E184721632B7800EB36FD /* AppState.h */,
+				079E184B21632B7800EB36FD /* AppState.m */,
+			);
+			path = AppState;
+			sourceTree = "<group>";
+		};
+		079E189D21632EA300EB36FD /* CurrencyHistory */ = {
+			isa = PBXGroup;
+			children = (
+				079E184921632B7800EB36FD /* CurrencyHistory.h */,
+				079E184521632B7800EB36FD /* CurrencyHistory.m */,
+			);
+			path = CurrencyHistory;
+			sourceTree = "<group>";
+		};
+		079E189E21632EB500EB36FD /* ExchangeRate */ = {
+			isa = PBXGroup;
+			children = (
+				079E184621632B7800EB36FD /* ExchangeRate.h */,
+				079E184A21632B7800EB36FD /* ExchangeRate.m */,
+			);
+			path = ExchangeRate;
+			sourceTree = "<group>";
+		};
+		079E189F21632EC300EB36FD /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				079E184821632B7800EB36FD /* Currency.h */,
+				079E184C21632B7800EB36FD /* Currency.m */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		079E18A021632ED500EB36FD /* CurrencyService */ = {
+			isa = PBXGroup;
+			children = (
+				079E184E21632B7800EB36FD /* CurrencyService.h */,
+				079E185221632B7800EB36FD /* CurrencyService.m */,
+			);
+			path = CurrencyService;
+			sourceTree = "<group>";
+		};
+		079E18A121632EE500EB36FD /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				079E184F21632B7800EB36FD /* ApiService.h */,
+				079E185121632B7800EB36FD /* ApiService.m */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		079E18A221632F3800EB36FD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				079E18AC21632F3800EB36FD /* AlertUtils.h */,
+				079E18A621632F3800EB36FD /* AlertUtils.m */,
+				079E18B021632F3800EB36FD /* AppInitializer.h */,
+				079E18A721632F3800EB36FD /* AppInitializer.m */,
+				079E18AD21632F3800EB36FD /* DateUtils.h */,
+				079E18A521632F3800EB36FD /* DateUtils.m */,
+				079E18A821632F3800EB36FD /* EncodeDecodeUtils.h */,
+				079E18AF21632F3800EB36FD /* EncodeDecodeUtils.m */,
+				079E18AA21632F3800EB36FD /* NSUserDefaultsUtils.h */,
+				079E18A421632F3800EB36FD /* NSUserDefaultsUtils.m */,
+				079E18A921632F3800EB36FD /* UIUtils.h */,
+				079E18AE21632F3800EB36FD /* UIUtils.m */,
+				079E18A321632F3800EB36FD /* Utils.h */,
+				079E18AB21632F3800EB36FD /* Utils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		07E36BBD214FC05B00C2811B = {
@@ -191,50 +330,16 @@
 		07E36BC8214FC05B00C2811B /* IosCurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
-				07FD1D54215EA17700FB2987 /* Others */,
-				07FD1D53215EA10A00FB2987 /* Views */,
-				07AF8ECB215A042D0065000E /* Error */,
-				0730A4252150D27400DBFC46 /* API */,
-				070B5F69215188F700C3BC84 /* Utils */,
-				0730A421215037BF00DBFC46 /* Model */,
+				079E18A221632F3800EB36FD /* Utils */,
+				079E184D21632B7800EB36FD /* API */,
+				079E187821632B7800EB36FD /* Error */,
+				079E184421632B7800EB36FD /* Model */,
+				079E183E21632B7800EB36FD /* Others */,
+				079E185321632B7800EB36FD /* Views */,
 				07E36BD2214FC05D00C2811B /* Assets.xcassets */,
 				07E36BD7214FC05D00C2811B /* Info.plist */,
 			);
 			path = IosCurrencyConverter;
-			sourceTree = "<group>";
-		};
-		07FCEEE62153CAC000AF258A /* CurrencyConverter */ = {
-			isa = PBXGroup;
-			children = (
-				07FCEEE72153CAC000AF258A /* CurrencyTableVC.h */,
-				07FCEEEA2153CAC000AF258A /* CurrencyTableVC.m */,
-				07FCEEE82153CAC000AF258A /* CurrencyConverterVC.h */,
-				07FCEEE92153CAC000AF258A /* CurrencyConverterVC.m */,
-				07AF8EE1215A61E50065000E /* CurrencyConverterVC.storyboard */,
-			);
-			path = CurrencyConverter;
-			sourceTree = "<group>";
-		};
-		07FD1D53215EA10A00FB2987 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				07FCEEE62153CAC000AF258A /* CurrencyConverter */,
-				073F262B21521A050078C978 /* Cells */,
-				07AF8EDB215A495E0065000E /* MainVC */,
-			);
-			name = Views;
-			path = "New Group1";
-			sourceTree = "<group>";
-		};
-		07FD1D54215EA17700FB2987 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				07E36BC9214FC05B00C2811B /* AppDelegate.h */,
-				07E36BCA214FC05B00C2811B /* AppDelegate.m */,
-				07E36BD4214FC05D00C2811B /* LaunchScreen.storyboard */,
-				07E36BD8214FC05D00C2811B /* main.m */,
-			);
-			path = Others;
 			sourceTree = "<group>";
 		};
 		57BFC4264FEFE5566924BD4E /* Frameworks */ = {
@@ -312,11 +417,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07AF8EE0215A57910065000E /* Main.storyboard in Resources */,
-				07AF8EE2215A61E50065000E /* CurrencyConverterVC.storyboard in Resources */,
-				073F263021521A250078C978 /* CountryCell.xib in Resources */,
-				07E36BD6214FC05D00C2811B /* LaunchScreen.storyboard in Resources */,
+				079E188721632B7800EB36FD /* CountryCell.xib in Resources */,
 				07E36BD3214FC05D00C2811B /* Assets.xcassets in Resources */,
+				079E187B21632B7800EB36FD /* LaunchScreen.storyboard in Resources */,
+				079E188E21632B7800EB36FD /* Main.storyboard in Resources */,
+				079E188621632B7800EB36FD /* CurrencyHistoryCell.xib in Resources */,
+				079E188821632B7800EB36FD /* CurrencyConverterVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,35 +454,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C7358E2158D68700C60A61 /* AppInitializer.m in Sources */,
-				07967D7B2158B99F00E2114A /* EncodeDecodeUtils.m in Sources */,
-				0730A42E2150FCA000DBFC46 /* ApiService.m in Sources */,
-				0709F80F2155F2A600A704BD /* NSUserDefaultsUtils.m in Sources */,
-				07AF8ED3215A05A50065000E /* ICCError.m in Sources */,
-				070B5F6C2151892700C3BC84 /* AlertUtils.m in Sources */,
-				07C735912158E97900C60A61 /* ExchangeRate.m in Sources */,
-				07C735942158EF6800C60A61 /* DateUtils.m in Sources */,
-				073F26372152548E0078C978 /* Utils.m in Sources */,
-				0730A4282150D28B00DBFC46 /* CurrencyService.m in Sources */,
-				07E36BD9214FC05D00C2811B /* main.m in Sources */,
-				0730A4242150381F00DBFC46 /* Currency.m in Sources */,
-				07AF8EDE215A4B9A0065000E /* MainTabBarController.m in Sources */,
-				07E36BCB214FC05B00C2811B /* AppDelegate.m in Sources */,
-				07FCEEEB2153CAC000AF258A /* CurrencyConverterVC.m in Sources */,
-				073F262F21521A250078C978 /* CountryCell.m in Sources */,
-				07FCEEEC2153CAC000AF258A /* CurrencyTableVC.m in Sources */,
-				0730A42B2150D29D00DBFC46 /* AppState.m in Sources */,
-				073F2633215250C80078C978 /* UIUtils.m in Sources */,
+				079E18B321632F3800EB36FD /* AlertUtils.m in Sources */,
+				079E188321632B7800EB36FD /* CurrencyService.m in Sources */,
+				079E187F21632B7800EB36FD /* ExchangeRate.m in Sources */,
+				079E18B521632F3800EB36FD /* Utils.m in Sources */,
+				079E188421632B7800EB36FD /* CurrencyHistoryCell.m in Sources */,
+				079E18B721632F3800EB36FD /* EncodeDecodeUtils.m in Sources */,
+				079E187D21632B7800EB36FD /* AppDelegate.m in Sources */,
+				079E188921632B7800EB36FD /* CurrencyHistoryTableVC.m in Sources */,
+				079E188121632B7800EB36FD /* Currency.m in Sources */,
+				079E18B421632F3800EB36FD /* AppInitializer.m in Sources */,
+				079E188021632B7800EB36FD /* AppState.m in Sources */,
+				079E18B221632F3800EB36FD /* DateUtils.m in Sources */,
+				079E18B621632F3800EB36FD /* UIUtils.m in Sources */,
+				079E188521632B7800EB36FD /* CountryCell.m in Sources */,
+				079E189621632B7800EB36FD /* ICCError.m in Sources */,
+				079E18B121632F3800EB36FD /* NSUserDefaultsUtils.m in Sources */,
+				079E188A21632B7800EB36FD /* CurrencyConverterVC.m in Sources */,
+				079E188221632B7800EB36FD /* ApiService.m in Sources */,
+				079E188D21632B7800EB36FD /* MainTabBarController.m in Sources */,
+				079E188B21632B7800EB36FD /* CurrencyTableVC.m in Sources */,
+				079E187E21632B7800EB36FD /* CurrencyHistory.m in Sources */,
+				079E187C21632B7800EB36FD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		07E36BD4214FC05D00C2811B /* LaunchScreen.storyboard */ = {
+		079E184021632B7800EB36FD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07E36BD5214FC05D00C2811B /* Base */,
+				079E184121632B7800EB36FD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Currency.h"
 @class CurrencyTableVC;
+@class Currency;
 
 @protocol CurrencyTableVCDelegate<NSObject>
 

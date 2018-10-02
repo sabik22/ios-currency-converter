@@ -37,7 +37,6 @@ static NSString *nibName = @"CountryCell";
     self.appState = [AppState instance];
     self.filteredCurrencies = self.appState.currencies;
     [self prepareSectionData];
-    
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
 }
 
@@ -48,7 +47,6 @@ static NSString *nibName = @"CountryCell";
     }
     return false;
 }
-
 
 - (void)prepareSectionData{
     [self.currencySections removeAllObjects];
@@ -66,7 +64,6 @@ static NSString *nibName = @"CountryCell";
     }
     [self.tableView reloadData];
 }
-
 
 - (void) setupSearchBar{
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, [AppState instance].screenWidth, 30)];

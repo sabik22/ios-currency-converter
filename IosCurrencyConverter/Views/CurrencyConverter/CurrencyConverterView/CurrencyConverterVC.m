@@ -11,6 +11,11 @@
 #import "AppState.h"
 #import "Utils.h"
 #import "CurrencyService.h"
+#import "CurrencyHistoryTableVC.h"
+#import "CurrencyHistoryCell.h"
+#import "CurrencyHistory.h"
+#import "CountryCell.h"
+#import "Utils.h"
 
 
 @interface CurrencyConverterVC ()
@@ -30,7 +35,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelExchangeRate;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *buttonChange;
-
+@property (weak, nonatomic) IBOutlet UIView *containerHistoryView;
 @property (nonatomic) int selectedNumber;
 @property (nonatomic) float exchangeRate;
 @property (nonatomic) BOOL isChanged;
@@ -40,9 +45,11 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCurrency1;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCurrency2;
+@property (strong, nonatomic) CurrencyService *currencyService;
 
 @end
 
+static NSString *nibName = @"CurrencyHistoryCell";
 @implementation CurrencyConverterVC
 
 - (void)viewDidLoad {
@@ -50,6 +57,7 @@
     self.appState = [AppState instance];
     self.currency1 = self.appState.defaultCurrency1;
     self.currency2 = self.appState.defaultCurrency2;
+    self.currencyService = [[CurrencyService alloc] init];
     [self roundUpImage];
     [self updateCurrencyLabel];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -62,6 +70,7 @@
                                 action:@selector(textFieldCurrency2DidChange:)
                       forControlEvents:UIControlEventEditingChanged];
     self.navigationController.view.backgroundColor = [UIColor colorWithRed:0.0f green:145.0f/255.0f blue:147.0f/255.0f alpha:1];
+    //[self setupTableViewCell];
 
     if (!self.appState.isFavoriteCurrencySelected){
         [AlertUtils showTwoActionsAlertWithTitle:@"Favorite currency" message:@"Please select your favorite currency." positiveText:@"Now" negativeText:@"Later" controller:self onAction:^(BOOL isPositive) {
@@ -70,6 +79,7 @@
             }
         }];
     }
+    
 }
 
 - (void)textFieldCurrency1DidChange:(UITextField *)textField {
@@ -128,7 +138,7 @@
     [self selectCurrencyNumber:2];
 }
 
-- (void) updateCurrencyLabel {
+- (void)updateCurrencyLabel {
     self.labelCurrency1.text = self.currency1.currencyID;
     NSString *imageName = [NSString stringWithFormat:@"%@.png", self.currency1.countryID];
     [self.imageViewCurrency1 setImage:[UIImage imageNamed: imageName.lowercaseString]];
@@ -137,11 +147,10 @@
     [self.imageViewCurrency2 setImage:[UIImage imageNamed: imageName.lowercaseString]];
 }
 
-- (void) updateExchangeRate {
+- (void)updateExchangeRate {
     self.labelExchangeRate.text = @"";
     [self.activityIndicator startAnimating];
-    CurrencyService *fetchCurrency = [[CurrencyService alloc] init];
-    [fetchCurrency fetchExchangeRateWithFirstCurrency:self.currency1.currencyID
+    [self.currencyService fetchExchangeRateWithFirstCurrency:self.currency1.currencyID
                                             secondCurrency:self.currency2.currencyID
                                                   success:^(float exchangeRate) {
         [self.activityIndicator stopAnimating];
@@ -156,9 +165,30 @@
         self.labelExchangeRate.text = @"Rate unavailable";
         [self updateExhangeRateView];
     }];
+    [self updateRateHistory];
 }
 
-- (void) updateExhangeRateView{
+- (void)updateRateHistory{
+    [self.currencyService fetchOneWeekHsitoryWithFirstCurrency:self.currency1.currencyID
+                                                secondCurrency:self.currency2.currencyID
+    success:^(NSDictionary *dictionary) {
+        NSString *key = [NSString stringWithFormat:@"%@_%@", self.currency1.currencyID,
+                         self.currency2.currencyID];
+        if(self.isChanged)
+            key = [NSString stringWithFormat:@"%@_%@", self.currency2.currencyID,
+                   self.currency1.currencyID];
+        NSDictionary *data = dictionary[key];
+        CurrencyHistoryTableVC *currencyHistoryTableVC = [[CurrencyHistoryTableVC alloc] init];
+        currencyHistoryTableVC.data = data;
+        [self.containerHistoryView addSubview:currencyHistoryTableVC.view];
+        [self addChildViewController:currencyHistoryTableVC];
+        [currencyHistoryTableVC didMoveToParentViewController:self];
+    } failure:^(NSError *error) {
+       
+    }];
+}
+
+- (void)updateExhangeRateView{
     if(self.exchangeRate == -1){
         self.labelCurrency1Rate.hidden = YES;
         self.labelCurrency2Rate.hidden = YES;
@@ -188,6 +218,7 @@
         self.textFieldCurrency2.text = self.textFieldCurrency1.text;
         [self textFieldCurrency2DidChange:nil];
     }
+    [self updateRateHistory];
 }
 
 #pragma mark - CurrencyTableVCDelegate

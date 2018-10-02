@@ -25,4 +25,9 @@
                                        success:(void (^)(float exchangeRate))success
                                        failure:(void (^)(NSError *error))failure;
 
+- (void)fetchOneWeekHsitoryWithFirstCurrency:(NSString *) firstCurrency
+                            secondCurrency: (NSString *) secondCurrency
+                                   success:(void (^)(NSDictionary *array))success
+                                   failure:(void (^)(NSError *error))failure;
+
 @end
