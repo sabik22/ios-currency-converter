@@ -191,25 +191,53 @@
                                             <action selector="changeAction:" destination="gmi-fJ-EmG" eventType="touchUpInside" id="ePt-6t-NAw"/>
                                         </connections>
                                     </button>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huj-xT-av9">
-                                        <rect key="frame" x="0.0" y="276" width="375" height="327"/>
-                                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </containerView>
+                                    <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4j-DL-ZLV">
+                                        <rect key="frame" x="10" y="336" width="355" height="257"/>
+                                        <subviews>
+                                            <containerView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihj-qC-RdA">
+                                                <rect key="frame" x="10" y="10" width="335" height="237"/>
+                                            </containerView>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="PNu-HX-Pg7">
+                                                <rect key="frame" x="167" y="118" width="20" height="20"/>
+                                                <color key="color" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </activityIndicatorView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crd-yO-SxL">
+                                                <rect key="frame" x="158.5" y="113.5" width="37" height="30"/>
+                                                <state key="normal" title="Retry">
+                                                    <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonRetryAction:" destination="gmi-fJ-EmG" eventType="touchUpInside" id="kaH-P4-N4h"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.62745098039215685" blue="0.64533296943231444" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Ihj-qC-RdA" secondAttribute="bottom" constant="10" id="Gh6-t2-dfD"/>
+                                            <constraint firstItem="PNu-HX-Pg7" firstAttribute="centerX" secondItem="q4j-DL-ZLV" secondAttribute="centerX" id="ObB-Tb-uIb"/>
+                                            <constraint firstItem="Ihj-qC-RdA" firstAttribute="leading" secondItem="q4j-DL-ZLV" secondAttribute="leading" constant="10" id="R1O-IJ-9b4"/>
+                                            <constraint firstItem="crd-yO-SxL" firstAttribute="centerY" secondItem="q4j-DL-ZLV" secondAttribute="centerY" id="S9u-kO-ldE"/>
+                                            <constraint firstItem="Ihj-qC-RdA" firstAttribute="top" secondItem="q4j-DL-ZLV" secondAttribute="top" constant="10" id="Uop-Db-Jpf"/>
+                                            <constraint firstItem="crd-yO-SxL" firstAttribute="centerX" secondItem="q4j-DL-ZLV" secondAttribute="centerX" id="iJl-vo-ToM"/>
+                                            <constraint firstItem="PNu-HX-Pg7" firstAttribute="centerY" secondItem="q4j-DL-ZLV" secondAttribute="centerY" id="ifu-F1-rGD"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ihj-qC-RdA" secondAttribute="trailing" constant="10" id="y90-Nb-wG0"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="q4j-DL-ZLV" firstAttribute="leading" secondItem="xup-dA-8Zi" secondAttribute="leading" constant="10" id="32t-6q-MC7"/>
                                     <constraint firstAttribute="trailing" secondItem="NmA-Eb-Gxg" secondAttribute="trailing" constant="20" id="521-vp-u0d"/>
                                     <constraint firstItem="NmA-Eb-Gxg" firstAttribute="top" secondItem="fEu-SF-rGq" secondAttribute="bottom" constant="15" id="873-EG-dBn"/>
+                                    <constraint firstItem="q4j-DL-ZLV" firstAttribute="top" secondItem="NmA-Eb-Gxg" secondAttribute="bottom" constant="100" id="8qi-mR-a9V"/>
                                     <constraint firstAttribute="trailing" secondItem="7zd-1q-5l9" secondAttribute="trailing" constant="20" id="BfT-iE-Qln"/>
                                     <constraint firstItem="TVB-gZ-Bt0" firstAttribute="top" secondItem="xup-dA-8Zi" secondAttribute="top" constant="110" id="CDn-Zo-aDn"/>
-                                    <constraint firstAttribute="trailing" secondItem="huj-xT-av9" secondAttribute="trailing" id="GAB-Ul-U7O"/>
                                     <constraint firstAttribute="trailing" secondItem="fEu-SF-rGq" secondAttribute="trailing" constant="30" id="GaV-80-mgA"/>
                                     <constraint firstItem="TVB-gZ-Bt0" firstAttribute="centerX" secondItem="xup-dA-8Zi" secondAttribute="centerX" id="Ol5-el-ZMT"/>
-                                    <constraint firstItem="huj-xT-av9" firstAttribute="top" secondItem="NmA-Eb-Gxg" secondAttribute="bottom" constant="40" id="PEj-GU-nly"/>
-                                    <constraint firstItem="huj-xT-av9" firstAttribute="leading" secondItem="xup-dA-8Zi" secondAttribute="leading" id="Rpr-Ff-Lby"/>
                                     <constraint firstItem="NmA-Eb-Gxg" firstAttribute="leading" secondItem="xup-dA-8Zi" secondAttribute="leading" constant="20" id="UK3-ke-Kac"/>
                                     <constraint firstItem="fEu-SF-rGq" firstAttribute="top" secondItem="7zd-1q-5l9" secondAttribute="bottom" constant="15" id="ZTt-nW-h57"/>
-                                    <constraint firstAttribute="bottom" secondItem="huj-xT-av9" secondAttribute="bottom" id="cJc-Ly-JUo"/>
+                                    <constraint firstAttribute="trailing" secondItem="q4j-DL-ZLV" secondAttribute="trailing" constant="10" id="iYF-gF-01g"/>
+                                    <constraint firstAttribute="bottom" secondItem="q4j-DL-ZLV" secondAttribute="bottom" constant="10" id="lPv-un-MQY"/>
                                     <constraint firstItem="fEu-SF-rGq" firstAttribute="leading" secondItem="xup-dA-8Zi" secondAttribute="leading" constant="30" id="q4k-5c-4Ca"/>
                                     <constraint firstItem="7zd-1q-5l9" firstAttribute="leading" secondItem="xup-dA-8Zi" secondAttribute="leading" constant="20" id="q4s-KZ-aZm"/>
                                     <constraint firstItem="7zd-1q-5l9" firstAttribute="top" secondItem="xup-dA-8Zi" secondAttribute="top" constant="25" id="svM-Uw-x9P"/>
@@ -229,15 +257,18 @@
                     <navigationItem key="navigationItem" title="Converter" id="Ey3-7X-9Eu"/>
                     <connections>
                         <outlet property="buttonChange" destination="TVB-gZ-Bt0" id="2ff-Ow-SaZ"/>
-                        <outlet property="containerHistoryView" destination="huj-xT-av9" id="Rib-v0-jby"/>
+                        <outlet property="buttonRetry" destination="crd-yO-SxL" id="yG4-WS-szf"/>
+                        <outlet property="containerChartView" destination="Ihj-qC-RdA" id="XyI-8t-Twn"/>
                         <outlet property="imageViewCurrency1" destination="UIg-xx-wR1" id="RIt-wT-dtt"/>
                         <outlet property="imageViewCurrency2" destination="Vnf-aq-zeQ" id="Pbb-Xd-76j"/>
+                        <outlet property="indicatorChartHistory" destination="PNu-HX-Pg7" id="xQm-Og-nzs"/>
                         <outlet property="labelCurrency1" destination="6Cw-hV-OeF" id="ugb-fe-B1j"/>
                         <outlet property="labelCurrency1Rate" destination="6UX-8P-N6b" id="nNG-Wk-ZmS"/>
                         <outlet property="labelCurrency2" destination="5nW-S3-fNb" id="S7q-h4-60d"/>
                         <outlet property="labelCurrency2Rate" destination="YOw-Ti-Oah" id="gay-1p-g19"/>
                         <outlet property="textFieldCurrency1" destination="8Ns-gh-02G" id="i9U-HF-lNm"/>
                         <outlet property="textFieldCurrency2" destination="UyR-4g-x17" id="3ih-6u-F6j"/>
+                        <outlet property="viewChart" destination="q4j-DL-ZLV" id="uUW-uQ-Ldq"/>
                         <outlet property="viewCurrency1" destination="7zd-1q-5l9" id="55Z-CR-I9m"/>
                         <outlet property="viewCurrency2" destination="NmA-Eb-Gxg" id="uMY-wM-WHw"/>
                     </connections>

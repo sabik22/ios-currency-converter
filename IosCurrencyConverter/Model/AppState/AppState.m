@@ -39,6 +39,8 @@
     }
     if(self = [super init]){
         self.currencies = [[NSMutableArray alloc] init];
+        [self initColor];
+        
         if (!self.defaultCurrency1) {
             self.defaultCurrency1 = [[Currency alloc] init];
             self.defaultCurrency1.currencyID = @"NPR";
@@ -56,6 +58,12 @@
     self.screenWidth = screenRect.size.width;
     self.screenHeight = screenRect.size.height;
     return self;
+}
+
+- (void) initColor {
+    self.primaryColor = [UIColor colorWithRed:0.0f green:145.0f/255.0f blue:147.0f/255.0f alpha:1];
+    self.lightPrimaryColor = [UIColor colorWithRed:0.0f green:160.0f/255.0f blue:165.0f/255.0f alpha:1];
+    self.offWhite = [UIColor colorWithRed:235.0f/255.0f green:235.0f/255.0f blue:235.0f/255.0f alpha:1];
 }
 
 

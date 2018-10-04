@@ -1,4 +1,4 @@
-module Pods_IosCurrencyConverter [system] {
+framework module Pods_IosCurrencyConverter {
   umbrella header "Pods-IosCurrencyConverter-umbrella.h"
 
   export *

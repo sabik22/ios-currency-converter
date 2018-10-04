@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 @class Currency;
-
 @interface AppState : NSObject <NSCoding>
 
 + (instancetype) instance;
@@ -19,5 +19,10 @@
 @property (nonatomic, assign)  float screenWidth;
 @property (nonatomic, assign)  float screenHeight;
 @property (nonatomic, assign)  BOOL isFavoriteCurrencySelected;
+
+//Colors
+@property (nonatomic, strong)  UIColor *primaryColor;
+@property (nonatomic, strong)  UIColor *lightPrimaryColor;
+@property (nonatomic, strong)  UIColor *offWhite;
 
 @end
