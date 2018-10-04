@@ -163,6 +163,7 @@ static NSString *nibName = @"CurrencyHistoryCell";
 
 - (void)updateExchangeRate {
     self.labelExchangeRate.text = @"";
+    NSLog(@"%@",self.currency2.countryID);
     [self.activityIndicator startAnimating];
     [self.currencyService fetchExchangeRateWithFirstCurrency:self.currency1.currencyID
                                             secondCurrency:self.currency2.currencyID
@@ -186,7 +187,6 @@ static NSString *nibName = @"CurrencyHistoryCell";
     [self.indicatorChartHistory startAnimating];
     self.currencyChartVC.view.hidden = YES;
     self.buttonRetry.hidden = YES;
-    
     [self.currencyService fetchOneWeekHsitoryWithFirstCurrency:self.currency1.currencyID
                                                 secondCurrency:self.currency2.currencyID
     success:^(NSDictionary *dictionary) {
