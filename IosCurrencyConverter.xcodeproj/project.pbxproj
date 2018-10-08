@@ -136,11 +136,15 @@
 		079E185321632B7800EB36FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				079E185F21632B7800EB36FD /* CurrencyConverterVC.storyboard */,
 				079E185421632B7800EB36FD /* Cells */,
-				079E185B21632B7800EB36FD /* CurrencyConverter */,
+				079E189B21632D9C00EB36FD /* CurrencyConverterVC */,
+				079E189921632D5B00EB36FD /* CurrencyTableVC */,
+				079E18B82163370F00EB36FD /* CurrencyChartVC */,
 				079E186321632B7800EB36FD /* MainVC */,
 			);
-			path = Views;
+			name = Views;
+			path = Scence;
 			sourceTree = "<group>";
 		};
 		079E185421632B7800EB36FD /* Cells */ = {
@@ -149,17 +153,6 @@
 				079E189821632D3D00EB36FD /* CountryCell */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		079E185B21632B7800EB36FD /* CurrencyConverter */ = {
-			isa = PBXGroup;
-			children = (
-				079E18B82163370F00EB36FD /* HistroyChartVC */,
-				079E189B21632D9C00EB36FD /* CurrencyConverterVC */,
-				079E189921632D5B00EB36FD /* CurrencyTableVC */,
-				079E185F21632B7800EB36FD /* CurrencyConverterVC.storyboard */,
-			);
-			path = CurrencyConverter;
 			sourceTree = "<group>";
 		};
 		079E186321632B7800EB36FD /* MainVC */ = {
@@ -284,13 +277,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		079E18B82163370F00EB36FD /* HistroyChartVC */ = {
+		079E18B82163370F00EB36FD /* CurrencyChartVC */ = {
 			isa = PBXGroup;
 			children = (
 				079E18C02163448B00EB36FD /* CurrencyChartVC.h */,
 				079E18C12163448B00EB36FD /* CurrencyChartVC.m */,
 			);
-			path = HistroyChartVC;
+			path = CurrencyChartVC;
 			sourceTree = "<group>";
 		};
 		07E36BBD214FC05B00C2811B = {
